@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83B0905A192333C900BBAA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
+		83B0905C192333C900BBAA07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905B192333C900BBAA07 /* CoreGraphics.framework */; };
+		83B0905E192333C900BBAA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
+		83B09064192333C900BBAA07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83B09062192333C900BBAA07 /* InfoPlist.strings */; };
+		83B09066192333C900BBAA07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B09065192333C900BBAA07 /* main.m */; };
+		83B0906A192333C900BBAA07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B09069192333C900BBAA07 /* AppDelegate.m */; };
+		83B0906D192333C900BBAA07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B0906B192333C900BBAA07 /* Main.storyboard */; };
+		83B09070192333C900BBAA07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0906F192333C900BBAA07 /* ViewController.m */; };
+		83B09072192333C900BBAA07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B09071192333C900BBAA07 /* Images.xcassets */; };
+		83B09079192333C900BBAA07 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09078192333C900BBAA07 /* XCTest.framework */; };
+		83B0907A192333C900BBAA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
+		83B0907B192333C900BBAA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
+		83B09083192333C900BBAA07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83B09081192333C900BBAA07 /* InfoPlist.strings */; };
+		83B09085192333C900BBAA07 /* sails_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B09084192333C900BBAA07 /* sails_iosTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83B0907C192333C900BBAA07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B0904E192333C900BBAA07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83B09055192333C900BBAA07;
+			remoteInfo = sails.ios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		83B09056192333C900BBAA07 /* sails.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sails.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B09059192333C900BBAA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83B0905B192333C900BBAA07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		83B0905D192333C900BBAA07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		83B09061192333C900BBAA07 /* sails.ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sails.ios-Info.plist"; sourceTree = "<group>"; };
+		83B09063192333C900BBAA07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83B09065192333C900BBAA07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83B09067192333C900BBAA07 /* sails.ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sails.ios-Prefix.pch"; sourceTree = "<group>"; };
+		83B09068192333C900BBAA07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83B09069192333C900BBAA07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83B0906C192333C900BBAA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83B0906E192333C900BBAA07 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		83B0906F192333C900BBAA07 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		83B09071192333C900BBAA07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		83B09077192333C900BBAA07 /* sails.iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sails.iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B09078192333C900BBAA07 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		83B09080192333C900BBAA07 /* sails.iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sails.iosTests-Info.plist"; sourceTree = "<group>"; };
+		83B09082192333C900BBAA07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83B09084192333C900BBAA07 /* sails_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sails_iosTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83B09053192333C900BBAA07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B0905C192333C900BBAA07 /* CoreGraphics.framework in Frameworks */,
+				83B0905E192333C900BBAA07 /* UIKit.framework in Frameworks */,
+				83B0905A192333C900BBAA07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B09074192333C900BBAA07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B09079192333C900BBAA07 /* XCTest.framework in Frameworks */,
+				83B0907B192333C900BBAA07 /* UIKit.framework in Frameworks */,
+				83B0907A192333C900BBAA07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83B0904D192333C900BBAA07 = {
+			isa = PBXGroup;
+			children = (
+				83B0905F192333C900BBAA07 /* sails.ios */,
+				83B0907E192333C900BBAA07 /* sails.iosTests */,
+				83B09058192333C900BBAA07 /* Frameworks */,
+				83B09057192333C900BBAA07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83B09057192333C900BBAA07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83B09056192333C900BBAA07 /* sails.ios.app */,
+				83B09077192333C900BBAA07 /* sails.iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83B09058192333C900BBAA07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83B09059192333C900BBAA07 /* Foundation.framework */,
+				83B0905B192333C900BBAA07 /* CoreGraphics.framework */,
+				83B0905D192333C900BBAA07 /* UIKit.framework */,
+				83B09078192333C900BBAA07 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83B0905F192333C900BBAA07 /* sails.ios */ = {
+			isa = PBXGroup;
+			children = (
+				83B09068192333C900BBAA07 /* AppDelegate.h */,
+				83B09069192333C900BBAA07 /* AppDelegate.m */,
+				83B0906B192333C900BBAA07 /* Main.storyboard */,
+				83B0906E192333C900BBAA07 /* ViewController.h */,
+				83B0906F192333C900BBAA07 /* ViewController.m */,
+				83B09071192333C900BBAA07 /* Images.xcassets */,
+				83B09060192333C900BBAA07 /* Supporting Files */,
+			);
+			path = sails.ios;
+			sourceTree = "<group>";
+		};
+		83B09060192333C900BBAA07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83B09061192333C900BBAA07 /* sails.ios-Info.plist */,
+				83B09062192333C900BBAA07 /* InfoPlist.strings */,
+				83B09065192333C900BBAA07 /* main.m */,
+				83B09067192333C900BBAA07 /* sails.ios-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83B0907E192333C900BBAA07 /* sails.iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				83B09084192333C900BBAA07 /* sails_iosTests.m */,
+				83B0907F192333C900BBAA07 /* Supporting Files */,
+			);
+			path = sails.iosTests;
+			sourceTree = "<group>";
+		};
+		83B0907F192333C900BBAA07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83B09080192333C900BBAA07 /* sails.iosTests-Info.plist */,
+				83B09081192333C900BBAA07 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83B09055192333C900BBAA07 /* sails.ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83B09088192333C900BBAA07 /* Build configuration list for PBXNativeTarget "sails.ios" */;
+			buildPhases = (
+				83B09052192333C900BBAA07 /* Sources */,
+				83B09053192333C900BBAA07 /* Frameworks */,
+				83B09054192333C900BBAA07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sails.ios;
+			productName = sails.ios;
+			productReference = 83B09056192333C900BBAA07 /* sails.ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83B09076192333C900BBAA07 /* sails.iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83B0908B192333C900BBAA07 /* Build configuration list for PBXNativeTarget "sails.iosTests" */;
+			buildPhases = (
+				83B09073192333C900BBAA07 /* Sources */,
+				83B09074192333C900BBAA07 /* Frameworks */,
+				83B09075192333C900BBAA07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83B0907D192333C900BBAA07 /* PBXTargetDependency */,
+			);
+			name = sails.iosTests;
+			productName = sails.iosTests;
+			productReference = 83B09077192333C900BBAA07 /* sails.iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83B0904E192333C900BBAA07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = eunoia;
+				TargetAttributes = {
+					83B09076192333C900BBAA07 = {
+						TestTargetID = 83B09055192333C900BBAA07;
+					};
+				};
+			};
+			buildConfigurationList = 83B09051192333C900BBAA07 /* Build configuration list for PBXProject "sails.ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83B0904D192333C900BBAA07;
+			productRefGroup = 83B09057192333C900BBAA07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83B09055192333C900BBAA07 /* sails.ios */,
+				83B09076192333C900BBAA07 /* sails.iosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83B09054192333C900BBAA07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B09072192333C900BBAA07 /* Images.xcassets in Resources */,
+				83B09064192333C900BBAA07 /* InfoPlist.strings in Resources */,
+				83B0906D192333C900BBAA07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B09075192333C900BBAA07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B09083192333C900BBAA07 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83B09052192333C900BBAA07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B09070192333C900BBAA07 /* ViewController.m in Sources */,
+				83B0906A192333C900BBAA07 /* AppDelegate.m in Sources */,
+				83B09066192333C900BBAA07 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B09073192333C900BBAA07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B09085192333C900BBAA07 /* sails_iosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83B0907D192333C900BBAA07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83B09055192333C900BBAA07 /* sails.ios */;
+			targetProxy = 83B0907C192333C900BBAA07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83B09062192333C900BBAA07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83B09063192333C900BBAA07 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		83B0906B192333C900BBAA07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83B0906C192333C900BBAA07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83B09081192333C900BBAA07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83B09082192333C900BBAA07 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83B09086192333C900BBAA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83B09087192333C900BBAA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83B09089192333C900BBAA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sails.ios/sails.ios-Prefix.pch";
+				INFOPLIST_FILE = "sails.ios/sails.ios-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		83B0908A192333C900BBAA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sails.ios/sails.ios-Prefix.pch";
+				INFOPLIST_FILE = "sails.ios/sails.ios-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		83B0908C192333C900BBAA07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sails.ios.app/sails.ios";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sails.ios/sails.ios-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "sails.iosTests/sails.iosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		83B0908D192333C900BBAA07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sails.ios.app/sails.ios";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sails.ios/sails.ios-Prefix.pch";
+				INFOPLIST_FILE = "sails.iosTests/sails.iosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83B09051192333C900BBAA07 /* Build configuration list for PBXProject "sails.ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B09086192333C900BBAA07 /* Debug */,
+				83B09087192333C900BBAA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83B09088192333C900BBAA07 /* Build configuration list for PBXNativeTarget "sails.ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B09089192333C900BBAA07 /* Debug */,
+				83B0908A192333C900BBAA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		83B0908B192333C900BBAA07 /* Build configuration list for PBXNativeTarget "sails.iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B0908C192333C900BBAA07 /* Debug */,
+				83B0908D192333C900BBAA07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83B0904E192333C900BBAA07 /* Project object */;
+}

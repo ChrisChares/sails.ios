@@ -11,6 +11,9 @@
 
 @interface MockModel : NSObject <SailsSerializable>
 
++ (id)testOne;
++ (id)testTwo;
+
 
 @property NSString *name;
 @property NSString *title;

@@ -10,10 +10,30 @@
 
 @implementation MockModel
 
++ (id)testOne
+{
+    MockModel *m = [[MockModel alloc] init];
+    m.name = @"Darth Vadar";
+    m.title = @"Head Custodian";
+    return m;
+    
+}
+
++ (id)testTwo
+{
+    MockModel *m = [[MockModel alloc] init];
+    m.name = @"Jar Jar Binks";
+    m.title = @"Senior Statesman";
+    return m;
+}
+
+
+
 
 - (NSDictionary *)toDictionary
 {
-    return @{@"name" : @"title"};
+    return @{@"name" : self.name,
+             @"title" : self.title};
 }
 
 + (id)fromDictionary:(NSDictionary *)dictionary

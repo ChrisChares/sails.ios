@@ -7,6 +7,7 @@
 //
 
 #import "SailsBaseResponseSerializer.h"
+#import "SailsSerializable.h"
 
 @implementation SailsBaseResponseSerializer
 
@@ -26,7 +27,7 @@
 {
     id JSON = [super responseObjectForResponse:response data:data error:error];
     
-    if ( ! error ) {
+    if ( JSON ) {
         if ( [JSON isKindOfClass:[NSArray class]] ) {
             NSMutableArray *models = [[NSMutableArray alloc] init];
             for ( id object in JSON ) {
@@ -54,6 +55,12 @@
 
 - (id)modelForDictionary:(NSDictionary *)dictionary
 {
-    return dictionary;
+   
+    if ( _modelClass ) {
+        return [_modelClass fromDictionary:dictionary];
+    } else {
+        return dictionary;
+
+    }
 }
 @end

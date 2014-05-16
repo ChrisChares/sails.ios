@@ -8,11 +8,17 @@
 
 #import <XCTest/XCTest.h>
 #import <OHHTTPStubs/OHHTTPStubs.h>
+#import <OHHTTPStubs/OHHTTPStubsResponse+JSON.h>
 #import "SailsIO.H"
+#define EXP_SHORTHAND
+#import <Expecta/Expecta.h>
+#import "MockModel.h"
 
 @interface SailsHTTPTests : XCTestCase
 
 @property SailsIO *sails;
+
+@property MockModel *testModel;
 
 @end
 
@@ -23,14 +29,13 @@
     [super setUp];
     
     _sails = [[SailsIO alloc] initWithBaseURLString:@"http://google.com"];
-
+    _testModel = [MockModel testOne];
+    
     [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
         return YES;
     } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
         
-        NSError *error;
-        NSData *data = [NSJSONSerialization dataWithJSONObject:@{@"Name": @"Dildo"} options:0 error:&error];
-        return [OHHTTPStubsResponse responseWithData:data statusCode:200 headers:@{@"Content-Type": @"text/json"}];
+        return [OHHTTPStubsResponse responseWithJSONObject:[_testModel toDictionary] statusCode:200 headers:@{}];
     
     }];
 }
@@ -41,12 +46,18 @@
     [super tearDown];
 }
 
-- (void)testSomethingStupid
+- (void)testMockData
 {
+    
+    __block BOOL test = false;
+    
     [_sails get:@"/" data:nil callback:^(NSError *error, id response) {
-        XCTAssertNotNil(nil, @"balls in yo face");
-        XCTAssertNotNil(error, @"Google shouldn't be returning valid json, this should error out");
+        test = YES;
     }];
+    
+    expect(test).willNot.equal(false);
+//    expect(_error).will.beNil();
+
 }
 
 @end

@@ -9,12 +9,22 @@
 #import <XCTest/XCTest.h>
 #import "SailsBaseResponseSerializer.h"
 #import <OHHTTPStubs.h>
+#import <OHHTTPStubsResponse+JSON.h>
+#import "MockModel.h"
+#import "SailsIO.h"
+#define EXP_SHORTHAND
+#import <Expecta/Expecta.h>
+
 @interface SailsBaseResponseSerializerTests : XCTestCase
 
 @property SailsBaseResponseSerializer *serializer;
 
-@property NSDictionary *testModel1;
-@property NSDictionary *testModel2;
+@property MockModel *testModel1;
+@property MockModel *testModel2;
+
+@property SailsIO *sails;
+
+@property id result;
 
 @end
 
@@ -24,17 +34,18 @@
 {
     [super setUp];
     
+    _sails = [[SailsIO alloc] initWithBaseURLString:@"http://www.google.com"];
     _serializer = [[SailsBaseResponseSerializer alloc] init];
-    _testModel1 = @{@"name": @"Jabba the Hutt", @"title" : @"Directory of Sexy"};
-    _testModel2 = @{@"name": @"Greedo", @"title": @"Junior Bounty Hunter"};
     
+    _testModel1 = [MockModel testOne];
+    _testModel2 = [MockModel testTwo];
+    
+    [Expecta setAsynchronousTestTimeout:5.0];
     [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
         return YES;
     } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
         
-        NSError *error;
-        NSData *data = [NSJSONSerialization dataWithJSONObject:@{@"Name": @"Dildo"} options:0 error:&error];
-        return [OHHTTPStubsResponse responseWithData:data statusCode:200 headers:@{@"Content-Type": @"text/json"}];
+        return [OHHTTPStubsResponse responseWithJSONObject:[_testModel1 toDictionary] statusCode:200 headers:@{}];
         
     }];
 
@@ -45,9 +56,39 @@
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     _serializer = nil;
-
+    [OHHTTPStubs removeAllStubs];
+    _result = nil;
     [super tearDown];
 }
+
+
+/*
+ Test the SailsSerializable Interface
+ */
+- (void)testModelBecomesDictionary
+{
+    expect([_testModel1 toDictionary]).toNot.beNil();
+}
+- (void)testModelBecomesPropertyDictionary
+{
+    NSDictionary *test = [_testModel1 toDictionary];
+    expect(test[@"name"]).to.equal(_testModel1.name);
+}
+- (void)testDictionaryBecomesModel
+{
+    NSDictionary *test = [_testModel2 toDictionary];
+    expect([MockModel fromDictionary:test]).toNot.beNil();
+}
+- (void)testDictionaryBecomesProperModel
+{
+    NSDictionary *test = [_testModel2 toDictionary];
+    MockModel *conv = [MockModel fromDictionary:test];
+    expect(conv.name).to.equal(test[@"name"]);
+}
+
+/*
+ Test the serializer itself
+ */
 
 - (void)testNotNil
 {
@@ -80,8 +121,36 @@
 
 - (void)testDictionaryInDictionaryOut
 {
-    NSError *error;
-  //  id data = [NSJSONSerialization dataWithJSONObject:_testModel1 options:0 error:&error];
-   // [_serializer responseObjectForResponse: data:<#(NSData *)#> error:<#(NSError *__autoreleasing *)#>]
+    
+    __block id responseObject;
+    [_sails get:@"/" data:nil callback:^(NSError *error, id response) {
+        NSLog(@"response %@", response);
+        responseObject = response;
+    }];
+    
+    expect(responseObject).willNot.beNil();
+}
+
+
+- (void)testCustomRouteSerializer
+{
+    SailsBaseResponseSerializer *serializer = [[SailsBaseResponseSerializer alloc] init];
+    serializer.modelClass = [MockModel class];
+    
+    SailsRouter *router = [[SailsRouter alloc] initWithRoutes:@{@"/event/:id/content": serializer}];
+    _sails.router = router;
+    
+ //   __block id responseObject;
+    [_sails get:@"/event/12/content" data:nil callback:^(NSError *error, id response) {
+        NSLog(@"Error %@ Response %@", error, response);
+        _result = response;
+       // expect(false).to.equal(true);
+
+
+    }];
+    expect(_result).willNot.beNil();
+    expect(_result).will.beKindOf([MockModel class]);
+
+    
 }
 @end

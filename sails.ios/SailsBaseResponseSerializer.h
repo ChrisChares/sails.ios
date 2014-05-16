@@ -17,6 +17,9 @@
 
 @interface SailsBaseResponseSerializer : AFJSONResponseSerializer
 
+//set me to utilize SailsSerializable model methods
+@property  Class modelClass;
+
 
 //SUBCLASS ME YO
 - (id)modelForDictionary:(NSDictionary *)dictionary;

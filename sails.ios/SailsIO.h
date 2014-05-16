@@ -11,6 +11,7 @@
 #import "SailsRouter.h"
 #import "SailsSocket.h"
 #import "SailsHTTP.h"
+#import "SailsBaseResponseSerializer.h"
 #import "SailsTransportProtocol.h"
 
 typedef enum : NSUInteger {
@@ -29,6 +30,7 @@ typedef enum : NSUInteger {
 
 @property (strong, readonly) NSString *baseURLString;
 @property (strong, readonly) NSURL *baseURL;
+
 //optional, default will be provided elsewise
 @property SailsRouter *router;
 

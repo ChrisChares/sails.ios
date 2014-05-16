@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		836BC2141925C32400B37E12 /* SailsSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2131925C32400B37E12 /* SailsSocket.m */; };
 		836BC2171925C36200B37E12 /* SailsHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2161925C36200B37E12 /* SailsHTTP.m */; };
+		836BC21D1925D24C00B37E12 /* SailsBaseResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC21C1925D24C00B37E12 /* SailsBaseResponseSerializer.m */; };
 		83B0905A192333C900BBAA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
 		83B0905C192333C900BBAA07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905B192333C900BBAA07 /* CoreGraphics.framework */; };
 		83B0905E192333C900BBAA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
@@ -47,6 +48,8 @@
 		836BC2151925C36200B37E12 /* SailsHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsHTTP.h; sourceTree = "<group>"; };
 		836BC2161925C36200B37E12 /* SailsHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsHTTP.m; sourceTree = "<group>"; };
 		836BC2181925C52A00B37E12 /* SailsTransportProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsTransportProtocol.h; sourceTree = "<group>"; };
+		836BC21B1925D24C00B37E12 /* SailsBaseResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsBaseResponseSerializer.h; sourceTree = "<group>"; };
+		836BC21C1925D24C00B37E12 /* SailsBaseResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsBaseResponseSerializer.m; sourceTree = "<group>"; };
 		83B09056192333C900BBAA07 /* sails.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sails.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B09059192333C900BBAA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83B0905B192333C900BBAA07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,17 +104,27 @@
 		836BC2191925C6B100B37E12 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				836BC2121925C32400B37E12 /* SailsSocket.h */,
-				836BC2131925C32400B37E12 /* SailsSocket.m */,
-				836BC2151925C36200B37E12 /* SailsHTTP.h */,
-				836BC2161925C36200B37E12 /* SailsHTTP.m */,
+				836BC21A1925CF4800B37E12 /* Protocols */,
 				83B0909019235AB100BBAA07 /* SailsIO.h */,
 				83B0909119235AB100BBAA07 /* SailsIO.m */,
 				83B0909319235AD100BBAA07 /* SailsRouter.h */,
 				83B0909419235AD100BBAA07 /* SailsRouter.m */,
-				836BC2181925C52A00B37E12 /* SailsTransportProtocol.h */,
+				836BC21B1925D24C00B37E12 /* SailsBaseResponseSerializer.h */,
+				836BC21C1925D24C00B37E12 /* SailsBaseResponseSerializer.m */,
 			);
 			name = src;
+			sourceTree = "<group>";
+		};
+		836BC21A1925CF4800B37E12 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				836BC2181925C52A00B37E12 /* SailsTransportProtocol.h */,
+				836BC2121925C32400B37E12 /* SailsSocket.h */,
+				836BC2131925C32400B37E12 /* SailsSocket.m */,
+				836BC2151925C36200B37E12 /* SailsHTTP.h */,
+				836BC2161925C36200B37E12 /* SailsHTTP.m */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		83B0904D192333C900BBAA07 = {
@@ -339,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836BC21D1925D24C00B37E12 /* SailsBaseResponseSerializer.m in Sources */,
 				83B0909219235AB100BBAA07 /* SailsIO.m in Sources */,
 				836BC2171925C36200B37E12 /* SailsHTTP.m in Sources */,
 				83B09070192333C900BBAA07 /* ViewController.m in Sources */,

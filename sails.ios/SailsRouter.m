@@ -7,6 +7,7 @@
 //
 
 #import "SailsRouter.h"
+#import "SailsBaseResponseSerializer.h"
 
 @implementation SailsRouter
 
@@ -23,7 +24,7 @@
         }
         
         _routes = mapTable;
-        _defaultResponseSerializer = [[AFJSONResponseSerializer alloc] init];
+        _defaultResponseSerializer = [[SailsBaseResponseSerializer alloc] init];
         
     }
     

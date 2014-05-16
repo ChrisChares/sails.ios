@@ -71,5 +71,11 @@
     XCTAssert([responseSerializer isKindOfClass:[AFHTTPResponseSerializer class]], @"HTTP serializer not returned for first second route");
 }
 
+- (void)testRouterHasADefault
+{
+    id responseSerializer = [_router responseSerializerForURL:@"/not/a/real/route"];
+    XCTAssertNotNil(responseSerializer, @"default serializer not returned for a fake route");
+}
+
 
 @end

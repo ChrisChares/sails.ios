@@ -14,7 +14,6 @@
 {
     self = [super init];
     if ( self ) {
-        self.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
         self.acceptableStatusCodes = [NSIndexSet indexSetWithIndex:200];
         self.removesKeysWithNullValues = YES;
     }

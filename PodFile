@@ -3,6 +3,10 @@ platform :ios, '7.0'
 # ignore all warnings from all pods
 inhibit_all_warnings!
 
+#testing frameworks
+pod 'OHHTTPStubs', '~> 3.1.1'
+pod 'Expecta', '~> 0.3.0'
+
 pod 'SOCKit', '~> 1.1'
 pod 'AFNetworking', '~> 2.2.1'
 pod 'socket.IO', '~> 0.5.2'

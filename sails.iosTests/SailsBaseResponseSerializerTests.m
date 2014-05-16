@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "SailsBaseResponseSerializer.h"
-
+#import <OHHTTPStubs.h>
 @interface SailsBaseResponseSerializerTests : XCTestCase
 
 @property SailsBaseResponseSerializer *serializer;
@@ -27,6 +27,17 @@
     _serializer = [[SailsBaseResponseSerializer alloc] init];
     _testModel1 = @{@"name": @"Jabba the Hutt", @"title" : @"Directory of Sexy"};
     _testModel2 = @{@"name": @"Greedo", @"title": @"Junior Bounty Hunter"};
+    
+    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+        return YES;
+    } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+        
+        NSError *error;
+        NSData *data = [NSJSONSerialization dataWithJSONObject:@{@"Name": @"Dildo"} options:0 error:&error];
+        return [OHHTTPStubsResponse responseWithData:data statusCode:200 headers:@{@"Content-Type": @"text/json"}];
+        
+    }];
+
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -70,7 +81,7 @@
 - (void)testDictionaryInDictionaryOut
 {
     NSError *error;
-    id data = [NSJSONSerialization dataWithJSONObject:_testModel1 options:0 error:&error];
-    [_serializer responseObjectForResponse: data:<#(NSData *)#> error:<#(NSError *__autoreleasing *)#>]
+  //  id data = [NSJSONSerialization dataWithJSONObject:_testModel1 options:0 error:&error];
+   // [_serializer responseObjectForResponse: data:<#(NSData *)#> error:<#(NSError *__autoreleasing *)#>]
 }
 @end

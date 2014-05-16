@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Expecta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-OHHTTPStubs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SOCKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8ADA88E5BA1842C1A9D6B6C3</key>
+		<key>07AC1A583A7C45AB8A5FE144</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>977CDA0E44CE457AB2ACB4F6</key>
+		<key>2CAD7B611C404563B1955A67</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B941F2700BA945BE96D249D1</key>
+		<key>2D126AE7401B40898C3B9F18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6796334023142F989E89326</key>
+		<key>3D17AA5142724D22B1FF370D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E02C4EF17E8F46B28030B84E</key>
+		<key>9C7FD1A94C1A497CA6A943CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D94D81855D2241108BA78504</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF81AB6CF0C5416DA5336858</key>
 		<dict>
 			<key>primary</key>
 			<true/>

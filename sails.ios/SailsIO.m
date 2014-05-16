@@ -17,91 +17,88 @@
 @implementation SailsIO
 
 
-+ (SailsIO *)connectToHost:(NSString *)url onPort:(NSInteger)port callback:(SailsIOConnectedBlock)cb
+static SailsIO *instance;
++ (SailsIO *)defaultInstance
 {
-    SailsIO *instance = [[SailsIO alloc] init];
-    instance.socket = [[SocketIO alloc] initWithDelegate:instance];
-    instance.connectedBlock = cb;
-    [instance.socket connectToHost:url onPort:port];
     return instance;
+}
++ (void)setDefaultInstance:(SailsIO *)anInstance
+{
+    instance = anInstance;
+}
+
+- (id)initWithBaseURLString:(NSString *)url
+{
+    self = [super init];
+    if ( self ) {
+        
+        _baseURLString = url;
+        _baseURL = [NSURL URLWithString:url];
+        _socket = [[SailsSocket alloc] init]; _socket.sails = self;
+        _http = [[SailsHTTP alloc] initWithBaseURL:_baseURL]; _http.sails = self;
+        _router = [[SailsRouter alloc] initWithRoutes:@{}];
+        _defaultProtocol = SailsProtocolHTTP;
+        
+    }
+    
+    return self;
+}
+
+
+/*
+ Whoop all the fun methods
+ */
+
+- (void)get:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb
+{
+    if ( protocol == SailsProtocolSockets ) {
+        [self.socket get:url data:data callback:cb];
+    } else {
+        [self.http get:url data:data callback:cb];
+    }
+}
+
+- (void)post:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb
+{
+    if ( protocol == SailsProtocolSockets ) {
+        [self.socket post:url data:data callback:cb];
+    } else {
+        [self.http post:url data:data callback:cb];
+    }
+}
+
+- (void)put:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb
+{
+    if ( protocol == SailsProtocolSockets ) {
+        [self.socket put:url data:data callback:cb];
+    } else {
+        [self.http put:url data:data callback:cb];
+    }
+}
+
+- (void)delete:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb
+{
+    if ( protocol == SailsProtocolSockets ) {
+        [self.socket delete:url data:data callback:cb];
+    } else {
+        [self.http delete:url data:data callback:cb];
+    }
 }
 
 - (void)get:(NSString *)url data:(id)data callback:(SailsIOBlock)cb
 {
-    [self request:url data:data callback:cb method:@"get"];
+    [self get:url data:data protocol:_defaultProtocol callback:cb];
 }
 - (void)post:(NSString *)url data:(id)data callback:(SailsIOBlock)cb
 {
-    [self request:url data:data callback:cb method:@"post"];
+    [self post:url data:data protocol:_defaultProtocol callback:cb];
 }
 - (void)put:(NSString *)url data:(id)data callback:(SailsIOBlock)cb
 {
-    [self request:url data:data callback:cb method:@"put"];
+    [self put:url data:data protocol:_defaultProtocol callback:cb];
 }
 - (void)delete:(NSString *)url data:(id)data callback:(SailsIOBlock)cb
 {
-    [self request:url data:data callback:cb method:@"delete"];
+    [self delete:url data:data protocol:_defaultProtocol callback:cb];
 }
-
-- (void)request:(NSString *)url data:(id)data callback:(SailsIOBlock)cb method:(NSString *)method
-{
-    if ( data == nil ) {
-        data = @{};
-    }
-    NSDictionary *payload = @{ @"url" : url,
-                               @"data" : data
-                             };
-    [self.socket sendEvent:method withData:payload andAcknowledge:^(id argsData) {
-        
-        NSError *error;
-        NSData *data = [argsData dataUsingEncoding:NSUTF8StringEncoding];
-        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-        if ( error ) {
-            NSLog(@"%@", error);
-            cb(error, nil);
-        } else {
-            cb(nil, result);
-        }
-    }];
-    
-    
-}
-
-#pragma mark - Socket IO
-- (void)socketIODidConnect:(SocketIO *)socket
-{
-    NSLog(@"Connected %@", socket);
-    _connected = YES;
-    _connectedBlock(socket);
-    _connectedBlock = nil;
-}
-
-- (void)socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error
-{
-    _connected = NO;
-    NSLog(@"Socket error %@", error);
-}
-- (void) socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet
-{
-    NSLog(@"Received message %@", packet);
-}
-- (void) socketIO:(SocketIO *)socket didReceiveJSON:(SocketIOPacket *)packet
-{
-    NSLog(@"Received JSON: %@", packet);
-}
-- (void) socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet
-{
-    NSLog(@"Received Event %@", packet);
-}
-- (void) socketIO:(SocketIO *)socket didSendMessage:(SocketIOPacket *)packet
-{
-    NSLog(@"Sent message %@", packet);
-}
-- (void) socketIO:(SocketIO *)socket onError:(NSError *)error
-{
-    NSLog(@"Received Error %@", error);
-}
-
-
-
 @end

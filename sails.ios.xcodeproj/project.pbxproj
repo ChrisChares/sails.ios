@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		836BC2141925C32400B37E12 /* SailsSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2131925C32400B37E12 /* SailsSocket.m */; };
+		836BC2171925C36200B37E12 /* SailsHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2161925C36200B37E12 /* SailsHTTP.m */; };
 		83B0905A192333C900BBAA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
 		83B0905C192333C900BBAA07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905B192333C900BBAA07 /* CoreGraphics.framework */; };
 		83B0905E192333C900BBAA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
@@ -40,6 +42,11 @@
 /* Begin PBXFileReference section */
 		1277DB1D82A446AD83390C38 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		405042540C56493CB4327FA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		836BC2121925C32400B37E12 /* SailsSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsSocket.h; sourceTree = "<group>"; };
+		836BC2131925C32400B37E12 /* SailsSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsSocket.m; sourceTree = "<group>"; };
+		836BC2151925C36200B37E12 /* SailsHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsHTTP.h; sourceTree = "<group>"; };
+		836BC2161925C36200B37E12 /* SailsHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsHTTP.m; sourceTree = "<group>"; };
+		836BC2181925C52A00B37E12 /* SailsTransportProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsTransportProtocol.h; sourceTree = "<group>"; };
 		83B09056192333C900BBAA07 /* sails.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sails.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B09059192333C900BBAA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83B0905B192333C900BBAA07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		836BC2191925C6B100B37E12 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				836BC2121925C32400B37E12 /* SailsSocket.h */,
+				836BC2131925C32400B37E12 /* SailsSocket.m */,
+				836BC2151925C36200B37E12 /* SailsHTTP.h */,
+				836BC2161925C36200B37E12 /* SailsHTTP.m */,
+				83B0909019235AB100BBAA07 /* SailsIO.h */,
+				83B0909119235AB100BBAA07 /* SailsIO.m */,
+				83B0909319235AD100BBAA07 /* SailsRouter.h */,
+				83B0909419235AD100BBAA07 /* SailsRouter.m */,
+				836BC2181925C52A00B37E12 /* SailsTransportProtocol.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		83B0904D192333C900BBAA07 = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +149,10 @@
 		83B0905F192333C900BBAA07 /* sails.ios */ = {
 			isa = PBXGroup;
 			children = (
-				83B0909019235AB100BBAA07 /* SailsIO.h */,
-				83B0909119235AB100BBAA07 /* SailsIO.m */,
+				836BC2191925C6B100B37E12 /* src */,
 				83B0908F192333F900BBAA07 /* example */,
 				83B0908E192333E200BBAA07 /* sails.ios */,
 				83B09060192333C900BBAA07 /* Supporting Files */,
-				83B0909319235AD100BBAA07 /* SailsRouter.h */,
-				83B0909419235AD100BBAA07 /* SailsRouter.m */,
 			);
 			path = sails.ios;
 			sourceTree = "<group>";
@@ -320,8 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B0909219235AB100BBAA07 /* SailsIO.m in Sources */,
+				836BC2171925C36200B37E12 /* SailsHTTP.m in Sources */,
 				83B09070192333C900BBAA07 /* ViewController.m in Sources */,
 				83B0906A192333C900BBAA07 /* AppDelegate.m in Sources */,
+				836BC2141925C32400B37E12 /* SailsSocket.m in Sources */,
 				83B0909519235AD100BBAA07 /* SailsRouter.m in Sources */,
 				83B09066192333C900BBAA07 /* main.m in Sources */,
 			);

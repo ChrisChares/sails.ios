@@ -23,10 +23,32 @@
         }
         
         _routes = mapTable;
+        _defaultResponseSerializer = [[AFJSONResponseSerializer alloc] init];
         
     }
     
     return self;
+}
+
+
+- (AFHTTPResponseSerializer *)responseSerializerForURL:(NSString *)url
+{
+    
+    NSArray *keys = [[_routes keyEnumerator] allObjects];
+    for ( SOCPattern *pattern in keys) {
+        
+        if ( [pattern stringMatches:url] ) {
+            id responseSerializer = [_routes objectForKey:pattern];
+            NSLog(@"Matched route for url: %@\nPattern: %@\nResponse Serializer: %@", url, pattern, responseSerializer);
+            return responseSerializer;
+        }
+        
+    }
+    
+    NSLog(@"No route matched for url %@, returning default serializer %@", url, _defaultResponseSerializer);
+    return _defaultResponseSerializer;
+    
+    
 }
 
 

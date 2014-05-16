@@ -7,9 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "SailsIO.h"
 
 @interface sails_iosTests : XCTestCase
 
+@property SailsIO *sails;
 @end
 
 @implementation sails_iosTests
@@ -17,7 +19,8 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    _sails = [[SailsIO alloc] initWithBaseURLString:@"http://localhost"];
 }
 
 - (void)tearDown
@@ -26,9 +29,25 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSailsExists
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertNotNil(_sails,  @"Singleton getter isn't working");
+   // XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+- (void)testSetDefaultsWorks
+{
+    [SailsIO setDefaultInstance:_sails];
+    XCTAssertNotNil([SailsIO defaultInstance], @"Default instance is null");
+}
+- (void)testSailsSocketsNotNil
+{
+    XCTAssertNotNil(_sails.socket, @"Socket is nil");
+}
+
+- (void)testSailsHTTPNotNil
+{
+    XCTAssertNotNil(_sails.http, @"http is nil");
 }
 
 @end

@@ -16,9 +16,12 @@
 
 - (id)initWithRoutes:(NSDictionary *)routes;
 
+//do not modify after set
+// i know nsmaptable is mutable though, so fuck
 @property (strong, readonly) NSMapTable *routes;
 
-- (BOOL)urlMatchesAnyRoute:(NSString *)url;
+@property AFHTTPResponseSerializer *defaultResponseSerializer;
+
 - (AFHTTPResponseSerializer *)responseSerializerForURL:(NSString *)url;
 
 @end

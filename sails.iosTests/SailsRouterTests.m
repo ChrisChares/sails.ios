@@ -12,7 +12,7 @@
 #import <SOCKit/SOCKit.h>
 
 #define route1 @"/event/:id/timeline"
-#define route2 @"/event/:id/feed"
+#define route2 @"/user/:id/events"
 #define route3 @"/agent/:id/events"
 
 @interface SailsRouterTests : XCTestCase
@@ -42,13 +42,34 @@
 
 - (void)testReturnsTypeSOCPattern
 {
-    id object = [[[_router.routes keyEnumerator] allObjects] objectAtIndex:0];
-    XCTAssert([[[_router.routes keyEnumerator] allObjects] isKindOfClass:[SOCPattern class]], @"Router isn't returning types of socpatterns");
+    id object = [[[_router.routes keyEnumerator] allObjects] firstObject];
+    XCTAssert([object isKindOfClass:[SOCPattern class]], @"Router isn't returning types of socpatterns");
 }
 
-- (void)testExample
+- (void)testMatchFirstRoute
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    id responseSerializer = [_router responseSerializerForURL:@"/event/12/timeline"];
+    XCTAssert(responseSerializer, @"No serializer returned for a valid route");
 }
+
+- (void)testFirstRouteReturnsJSON
+{
+    id responseSerializer = [_router responseSerializerForURL:@"/event/12/timeline"];
+    XCTAssert([responseSerializer isKindOfClass:[AFJSONResponseSerializer class]], @"JSON serializer not returned for first route");
+}
+
+- (void)testMatchesSecondRoute
+{
+    id responseSerializer = [_router responseSerializerForURL:@"/user/1/events"];
+    XCTAssert(responseSerializer, @"No serializer returned for a valid route");
+
+}
+
+- (void)testSecondRouteReturnsHTTP
+{
+    id responseSerializer = [_router responseSerializerForURL:@"/user/1/events"];
+    XCTAssert([responseSerializer isKindOfClass:[AFHTTPResponseSerializer class]], @"HTTP serializer not returned for first second route");
+}
+
 
 @end

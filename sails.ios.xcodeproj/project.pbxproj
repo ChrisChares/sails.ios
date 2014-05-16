@@ -21,6 +21,10 @@
 		83B0907B192333C900BBAA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
 		83B09083192333C900BBAA07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83B09081192333C900BBAA07 /* InfoPlist.strings */; };
 		83B09085192333C900BBAA07 /* sails_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B09084192333C900BBAA07 /* sails_iosTests.m */; };
+		83B0909219235AB100BBAA07 /* SailsIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0909119235AB100BBAA07 /* SailsIO.m */; };
+		83B0909519235AD100BBAA07 /* SailsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0909419235AD100BBAA07 /* SailsRouter.m */; };
+		83B0909719235EE800BBAA07 /* SailsRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0909619235EE800BBAA07 /* SailsRouterTests.m */; };
+		9DFE8F2C14DC496FA9898E97 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 405042540C56493CB4327FA1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1277DB1D82A446AD83390C38 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		405042540C56493CB4327FA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B09056192333C900BBAA07 /* sails.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sails.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B09059192333C900BBAA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83B0905B192333C900BBAA07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,11 @@
 		83B09080192333C900BBAA07 /* sails.iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sails.iosTests-Info.plist"; sourceTree = "<group>"; };
 		83B09082192333C900BBAA07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83B09084192333C900BBAA07 /* sails_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sails_iosTests.m; sourceTree = "<group>"; };
+		83B0909019235AB100BBAA07 /* SailsIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsIO.h; sourceTree = "<group>"; };
+		83B0909119235AB100BBAA07 /* SailsIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsIO.m; sourceTree = "<group>"; };
+		83B0909319235AD100BBAA07 /* SailsRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsRouter.h; sourceTree = "<group>"; };
+		83B0909419235AD100BBAA07 /* SailsRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsRouter.m; sourceTree = "<group>"; };
+		83B0909619235EE800BBAA07 /* SailsRouterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsRouterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,7 @@
 				83B0905C192333C900BBAA07 /* CoreGraphics.framework in Frameworks */,
 				83B0905E192333C900BBAA07 /* UIKit.framework in Frameworks */,
 				83B0905A192333C900BBAA07 /* Foundation.framework in Frameworks */,
+				9DFE8F2C14DC496FA9898E97 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +98,7 @@
 				83B0907E192333C900BBAA07 /* sails.iosTests */,
 				83B09058192333C900BBAA07 /* Frameworks */,
 				83B09057192333C900BBAA07 /* Products */,
+				1277DB1D82A446AD83390C38 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +118,7 @@
 				83B0905B192333C900BBAA07 /* CoreGraphics.framework */,
 				83B0905D192333C900BBAA07 /* UIKit.framework */,
 				83B09078192333C900BBAA07 /* XCTest.framework */,
+				405042540C56493CB4327FA1 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,13 +126,13 @@
 		83B0905F192333C900BBAA07 /* sails.ios */ = {
 			isa = PBXGroup;
 			children = (
-				83B09068192333C900BBAA07 /* AppDelegate.h */,
-				83B09069192333C900BBAA07 /* AppDelegate.m */,
-				83B0906B192333C900BBAA07 /* Main.storyboard */,
-				83B0906E192333C900BBAA07 /* ViewController.h */,
-				83B0906F192333C900BBAA07 /* ViewController.m */,
-				83B09071192333C900BBAA07 /* Images.xcassets */,
+				83B0909019235AB100BBAA07 /* SailsIO.h */,
+				83B0909119235AB100BBAA07 /* SailsIO.m */,
+				83B0908F192333F900BBAA07 /* example */,
+				83B0908E192333E200BBAA07 /* sails.ios */,
 				83B09060192333C900BBAA07 /* Supporting Files */,
+				83B0909319235AD100BBAA07 /* SailsRouter.h */,
+				83B0909419235AD100BBAA07 /* SailsRouter.m */,
 			);
 			path = sails.ios;
 			sourceTree = "<group>";
@@ -139,6 +153,7 @@
 			children = (
 				83B09084192333C900BBAA07 /* sails_iosTests.m */,
 				83B0907F192333C900BBAA07 /* Supporting Files */,
+				83B0909619235EE800BBAA07 /* SailsRouterTests.m */,
 			);
 			path = sails.iosTests;
 			sourceTree = "<group>";
@@ -152,6 +167,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		83B0908E192333E200BBAA07 /* sails.ios */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = sails.ios;
+			sourceTree = "<group>";
+		};
+		83B0908F192333F900BBAA07 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				83B09068192333C900BBAA07 /* AppDelegate.h */,
+				83B09069192333C900BBAA07 /* AppDelegate.m */,
+				83B0906B192333C900BBAA07 /* Main.storyboard */,
+				83B0906E192333C900BBAA07 /* ViewController.h */,
+				83B0906F192333C900BBAA07 /* ViewController.m */,
+				83B09071192333C900BBAA07 /* Images.xcassets */,
+			);
+			name = example;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83B09088192333C900BBAA07 /* Build configuration list for PBXNativeTarget "sails.ios" */;
 			buildPhases = (
+				B65DBEC706E6458CA1D02EE6 /* Check Pods Manifest.lock */,
 				83B09052192333C900BBAA07 /* Sources */,
 				83B09053192333C900BBAA07 /* Frameworks */,
 				83B09054192333C900BBAA07 /* Resources */,
+				5C1658B6A0E246B199A22D5B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,13 +281,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C1658B6A0E246B199A22D5B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B65DBEC706E6458CA1D02EE6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		83B09052192333C900BBAA07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B0909219235AB100BBAA07 /* SailsIO.m in Sources */,
 				83B09070192333C900BBAA07 /* ViewController.m in Sources */,
 				83B0906A192333C900BBAA07 /* AppDelegate.m in Sources */,
+				83B0909519235AD100BBAA07 /* SailsRouter.m in Sources */,
 				83B09066192333C900BBAA07 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B09085192333C900BBAA07 /* sails_iosTests.m in Sources */,
+				83B0909719235EE800BBAA07 /* SailsRouterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +446,7 @@
 		};
 		83B09089192333C900BBAA07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -386,6 +460,7 @@
 		};
 		83B0908A192333C900BBAA07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -399,6 +474,7 @@
 		};
 		83B0908C192333C900BBAA07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sails.ios.app/sails.ios";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -421,6 +497,7 @@
 		};
 		83B0908D192333C900BBAA07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sails.ios.app/sails.ios";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -456,6 +533,7 @@
 				83B0908A192333C900BBAA07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83B0908B192333C900BBAA07 /* Build configuration list for PBXNativeTarget "sails.iosTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +542,7 @@
 				83B0908D192333C900BBAA07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

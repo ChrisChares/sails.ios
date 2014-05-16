@@ -1,0 +1,8 @@
+platform :ios, '7.0'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+pod 'SOCKit', '~> 1.1'
+pod 'AFNetworking', '~> 2.2.1'
+pod 'socket.IO', '~> 0.5.2'

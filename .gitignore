@@ -7,6 +7,9 @@
 # Pods/
 # Xcode
 #
+
+.DS_Store
+
 build/
 *.pbxuser
 !default.pbxuser

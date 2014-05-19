@@ -1,25 +1,16 @@
 //
-//  MockModel.h
+//  MockPost.h
 //  sails.ios
 //
-//  Created by Chris Chares on 5/15/14.
+//  Created by Chris Chares on 5/19/14.
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "SailsSerializable.h"
 
-@interface MockModel : NSObject <SailsSerializable>
+@interface MockPost : NSObject <SailsSerializable>
 
-+ (id)testOne;
-+ (id)testTwo;
-
-
-@property NSString *name;
 @property NSString *title;
-
-
-
-
 
 @end

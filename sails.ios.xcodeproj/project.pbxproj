@@ -12,8 +12,9 @@
 		836BC21D1925D24C00B37E12 /* SailsBaseResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC21C1925D24C00B37E12 /* SailsBaseResponseSerializer.m */; };
 		836BC21F1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC21E1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m */; };
 		836BC2211925DB0E00B37E12 /* SailsHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2201925DB0E00B37E12 /* SailsHTTPTests.m */; };
-		836BC2261925E07500B37E12 /* MockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2251925E07500B37E12 /* MockModel.m */; };
+		836BC2261925E07500B37E12 /* MockUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2251925E07500B37E12 /* MockUser.m */; };
 		836BC228192A8BE700B37E12 /* testSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC227192A8BE700B37E12 /* testSocket.m */; };
+		836BC22B192A953B00B37E12 /* MockPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC22A192A953B00B37E12 /* MockPost.m */; };
 		83B0905A192333C900BBAA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
 		83B0905C192333C900BBAA07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905B192333C900BBAA07 /* CoreGraphics.framework */; };
 		83B0905E192333C900BBAA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
@@ -57,9 +58,11 @@
 		836BC21E1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsBaseResponseSerializerTests.m; sourceTree = "<group>"; };
 		836BC2201925DB0E00B37E12 /* SailsHTTPTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsHTTPTests.m; sourceTree = "<group>"; };
 		836BC2231925E02400B37E12 /* SailsSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsSerializable.h; sourceTree = "<group>"; };
-		836BC2241925E07500B37E12 /* MockModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockModel.h; sourceTree = "<group>"; };
-		836BC2251925E07500B37E12 /* MockModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockModel.m; sourceTree = "<group>"; };
+		836BC2241925E07500B37E12 /* MockUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockUser.h; sourceTree = "<group>"; };
+		836BC2251925E07500B37E12 /* MockUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockUser.m; sourceTree = "<group>"; };
 		836BC227192A8BE700B37E12 /* testSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testSocket.m; sourceTree = "<group>"; };
+		836BC229192A953B00B37E12 /* MockPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPost.h; sourceTree = "<group>"; };
+		836BC22A192A953B00B37E12 /* MockPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPost.m; sourceTree = "<group>"; };
 		83B09056192333C900BBAA07 /* sails.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sails.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B09059192333C900BBAA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83B0905B192333C900BBAA07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +149,17 @@
 			name = serialization;
 			sourceTree = "<group>";
 		};
+		836BC22C192A956300B37E12 /* Mock Objects */ = {
+			isa = PBXGroup;
+			children = (
+				836BC2241925E07500B37E12 /* MockUser.h */,
+				836BC2251925E07500B37E12 /* MockUser.m */,
+				836BC229192A953B00B37E12 /* MockPost.h */,
+				836BC22A192A953B00B37E12 /* MockPost.m */,
+			);
+			name = "Mock Objects";
+			sourceTree = "<group>";
+		};
 		83B0904D192333C900BBAA07 = {
 			isa = PBXGroup;
 			children = (
@@ -203,13 +217,12 @@
 		83B0907E192333C900BBAA07 /* sails.iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				836BC22C192A956300B37E12 /* Mock Objects */,
 				83B09084192333C900BBAA07 /* sails_iosTests.m */,
 				83B0907F192333C900BBAA07 /* Supporting Files */,
 				83B0909619235EE800BBAA07 /* SailsRouterTests.m */,
 				836BC21E1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m */,
 				836BC2201925DB0E00B37E12 /* SailsHTTPTests.m */,
-				836BC2241925E07500B37E12 /* MockModel.h */,
-				836BC2251925E07500B37E12 /* MockModel.m */,
 				836BC227192A8BE700B37E12 /* testSocket.m */,
 			);
 			path = sails.iosTests;
@@ -393,8 +406,9 @@
 			files = (
 				836BC21F1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m in Sources */,
 				83B09085192333C900BBAA07 /* sails_iosTests.m in Sources */,
+				836BC22B192A953B00B37E12 /* MockPost.m in Sources */,
 				836BC2211925DB0E00B37E12 /* SailsHTTPTests.m in Sources */,
-				836BC2261925E07500B37E12 /* MockModel.m in Sources */,
+				836BC2261925E07500B37E12 /* MockUser.m in Sources */,
 				836BC228192A8BE700B37E12 /* testSocket.m in Sources */,
 				83B0909719235EE800BBAA07 /* SailsRouterTests.m in Sources */,
 			);

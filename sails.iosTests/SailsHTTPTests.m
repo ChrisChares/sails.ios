@@ -12,13 +12,13 @@
 #import "SailsIO.H"
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
-#import "MockModel.h"
+#import "MockUser.h"
 
 @interface SailsHTTPTests : XCTestCase
 
 @property SailsIO *sails;
 
-@property MockModel *testModel;
+@property MockUser *testModel;
 
 @end
 
@@ -29,7 +29,7 @@
     [super setUp];
     
     _sails = [[SailsIO alloc] initWithBaseURLString:@"http://google.com"];
-    _testModel = [MockModel testOne];
+    _testModel = [MockUser testOne];
     
     [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
         return YES;

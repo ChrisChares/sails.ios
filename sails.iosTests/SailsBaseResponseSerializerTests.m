@@ -10,7 +10,7 @@
 #import "SailsBaseResponseSerializer.h"
 #import <OHHTTPStubs.h>
 #import <OHHTTPStubsResponse+JSON.h>
-#import "MockModel.h"
+#import "MockUser.h"
 #import "SailsIO.h"
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
@@ -19,8 +19,8 @@
 
 @property SailsBaseResponseSerializer *serializer;
 
-@property MockModel *testModel1;
-@property MockModel *testModel2;
+@property MockUser *testModel1;
+@property MockUser *testModel2;
 
 @property SailsIO *sails;
 
@@ -37,8 +37,8 @@
     _sails = [[SailsIO alloc] initWithBaseURLString:@"http://www.google.com"];
     _serializer = [[SailsBaseResponseSerializer alloc] init];
     
-    _testModel1 = [MockModel testOne];
-    _testModel2 = [MockModel testTwo];
+    _testModel1 = [MockUser testOne];
+    _testModel2 = [MockUser testTwo];
     
     [Expecta setAsynchronousTestTimeout:5.0];
     [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
@@ -77,12 +77,12 @@
 - (void)testDictionaryBecomesModel
 {
     NSDictionary *test = [_testModel2 toDictionary];
-    expect([MockModel fromDictionary:test]).toNot.beNil();
+    expect([MockUser fromDictionary:test]).toNot.beNil();
 }
 - (void)testDictionaryBecomesProperModel
 {
     NSDictionary *test = [_testModel2 toDictionary];
-    MockModel *conv = [MockModel fromDictionary:test];
+    MockUser *conv = [MockUser fromDictionary:test];
     expect(conv.name).to.equal(test[@"name"]);
 }
 
@@ -135,7 +135,7 @@
 - (void)testCustomRouteSerializer
 {
     SailsBaseResponseSerializer *serializer = [[SailsBaseResponseSerializer alloc] init];
-    serializer.modelClass = [MockModel class];
+    serializer.modelClass = [MockUser class];
     
     SailsRouter *router = [[SailsRouter alloc] initWithRoutes:@{@"/event/:id/content": serializer}];
     _sails.router = router;
@@ -149,7 +149,7 @@
 
     }];
     expect(_result).willNot.beNil();
-    expect(_result).will.beKindOf([MockModel class]);
+    expect(_result).will.beKindOf([MockUser class]);
 
     
 }

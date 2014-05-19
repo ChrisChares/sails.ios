@@ -10,6 +10,8 @@
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
 #import "SailsIO.h"
+#import "MockUser.h"
+#import "MockPost.h"
 
 
 @interface testSocket : XCTestCase
@@ -67,10 +69,29 @@
         }];
     };
     [_sails.socket connect];
-
-    
     expect(users).willNot.beNil();
+}
+
+- (void)testCreatePost
+{
+    MockPost *post = [MockPost fromDictionary:@{@"title": @"Omg Food lol"}];
+    _sails.socket.connectedBlock = ^(SocketIO *socket){
+   
+        
+        
+        
+        
+        
+    };
+    [_sails.socket connect];
 }
 
 
 @end
+
+
+
+
+
+
+

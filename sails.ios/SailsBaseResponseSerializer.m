@@ -15,7 +15,7 @@
 {
     self = [super init];
     if ( self ) {
-        self.acceptableStatusCodes = [NSIndexSet indexSetWithIndex:200];
+        self.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 99)];
         self.removesKeysWithNullValues = YES;
     }
     

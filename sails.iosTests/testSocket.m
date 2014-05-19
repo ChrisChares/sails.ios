@@ -74,16 +74,20 @@
 
 - (void)testCreatePost
 {
-    MockPost *post = [MockPost fromDictionary:@{@"title": @"Omg Food lol"}];
+    MockUser *user = [MockUser testOne];
+   __block  id returnedUser;
     _sails.socket.connectedBlock = ^(SocketIO *socket){
    
         
-        
+        [_sails post:@"/user" data:user callback:^(NSError *error, id response) {
+            returnedUser = response;
+        }];
         
         
         
     };
     [_sails.socket connect];
+    expect(returnedUser).willNot.beNil();
 }
 
 

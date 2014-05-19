@@ -21,7 +21,7 @@
 + (id)testTwo
 {
     MockUser *m = [[MockUser alloc] init];
-    m.email = @"jarjar@naboo.com"
+    m.email = @"jarjar@naboo.com";
     return m;
 }
 

@@ -10,6 +10,7 @@
 #import "SailsIO.h"
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
+#import "MockUser.h"
 
 @interface sails_iosTests : XCTestCase
 
@@ -55,6 +56,18 @@
 - (void)testSocketNotNil
 {
     expect(_sails.socket.socket).toNot.beNil();
+}
+
+- (void)testDictionaryPassthrough
+{
+    NSDictionary *testDictionary = @{@"derp" : @"double derp"};
+    expect([_sails requestDataForObject:testDictionary]).to.beKindOf([NSDictionary class]);
+}
+
+- (void)testMockObjectConversion
+{
+    MockUser *user = [MockUser testOne];
+    expect([_sails requestDataForObject:user]).to.beKindOf([NSDictionary class]);
 }
 
 @end

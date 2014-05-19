@@ -52,6 +52,8 @@ typedef enum : NSUInteger {
 - (void)put:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb;
 - (void)delete:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb;
 
+//exposed for testing
+- (id)requestDataForObject:(id)object;
 
 
 @end

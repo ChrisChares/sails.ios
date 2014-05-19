@@ -28,24 +28,32 @@
 {
     [super setUp];
     
-    _sails = [[SailsIO alloc] initWithBaseURLString:@"http://google.com"];
-    _testModel = [MockUser testOne];
+    _sails = [[SailsIO alloc] initWithBaseURLString:@"http://localhost:1337"];
+    _sails.defaultProtocol = SailsProtocolHTTP;
     
-    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-        return YES;
-    } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
-        
-        return [OHHTTPStubsResponse responseWithJSONObject:[_testModel toDictionary] statusCode:200 headers:@{}];
+    _testModel = [MockUser testTwo];
     
-    }];
 }
 
 - (void)tearDown
 {
-    [OHHTTPStubs removeAllStubs];
     [super tearDown];
 }
 
+- (void)testCreateUser
+{
+    
+    __block id responseObject;
+    [_sails post:@"/user" data:_testModel callback:^(NSError *error, id response) {
+       
+        responseObject = response;
+        
+    }];
+    
+    expect(responseObject).willNot.beNil();
+}
+
+/*
 - (void)testMockData
 {
     
@@ -59,5 +67,6 @@
 //    expect(_error).will.beNil();
 
 }
+ */
 
 @end

@@ -72,7 +72,7 @@
 - (void)testModelBecomesPropertyDictionary
 {
     NSDictionary *test = [_testModel1 toDictionary];
-    expect(test[@"name"]).to.equal(_testModel1.name);
+    expect(test[@"email"]).to.equal(_testModel1.email);
 }
 - (void)testDictionaryBecomesModel
 {
@@ -83,7 +83,7 @@
 {
     NSDictionary *test = [_testModel2 toDictionary];
     MockUser *conv = [MockUser fromDictionary:test];
-    expect(conv.name).to.equal(test[@"name"]);
+    expect(conv.email).to.equal(test[@"email"]);
 }
 
 /*

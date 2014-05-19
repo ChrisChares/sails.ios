@@ -20,7 +20,6 @@ typedef enum : NSUInteger {
 } SailsProtocol;
 
 
-
 @interface SailsIO : NSObject <SailsTransportProtocol>
 
 + (SailsIO *)defaultInstance;

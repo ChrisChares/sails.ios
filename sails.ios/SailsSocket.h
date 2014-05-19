@@ -21,9 +21,9 @@ typedef void(^SailsIODisconnectedBlock)(NSError *error, SocketIO *socket);
 @property (weak, nonatomic) SailsIO *sails;
 
 @property SocketIO *socket;
-@property BOOL connected;
 
-- (SailsIO *)connectToHost:(NSString *)url onPort:(NSInteger)port callback:(SailsIOConnectedBlock)cb;
+- (void)connect;
+- (void)disconnect;
 
 @property (strong) SailsIOConnectedBlock connectedBlock;
 @property (strong) SailsIODisconnectedBlock disconnectedBlock;

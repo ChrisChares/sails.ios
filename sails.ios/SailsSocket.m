@@ -9,18 +9,50 @@
 #import "SailsSocket.h"
 #import "SailsIO.h"
 
+#define DEFAULT_MAX_RECONNECT_ATTEMPTS 3
+
+
+@interface SailsSocket()
+
+@property NSString *host;
+@property NSInteger port;
+
+@property NSInteger reconnectAttempts;
+@property NSInteger maxReconnectAttempts;
+@end
+
+
 @implementation SailsSocket
 
-/*
-+ (SailsIO *)connectToHost:(NSString *)url onPort:(NSInteger)port callback:(SailsIOConnectedBlock)cb
+- (id)init
 {
-    SailsIO *instance = [[SailsIO alloc] init];
-    instance.socket = [[SocketIO alloc] initWithDelegate:instance];
-    instance.connectedBlock = cb;
-    [instance.socket connectToHost:url onPort:port];
-    return instance;
+    self = [super init];
+    if ( self ) {
+        self.socket = [[SocketIO alloc] initWithDelegate:self];
+        NSURL *baseURL = _sails.baseURL;
+        _host = [baseURL host];
+        _port = [[baseURL port] integerValue];
+        if ( ! _port ) {
+            NSLog(@"No port specified for socket connection, defaulting to 80");
+            _port = 80;
+        }
+        
+        _maxReconnectAttempts = DEFAULT_MAX_RECONNECT_ATTEMPTS;
+    }
+    return self;
 }
- */
+
+- (void)connect
+{
+
+    [self.socket connectToHost:_host onPort:_port];
+
+}
+
+- (void)disconnect
+{
+    [self.socket disconnect];
+}
 
 - (void)get:(NSString *)url data:(id)data callback:(SailsIOBlock)cb
 {
@@ -67,15 +99,17 @@
 - (void)socketIODidConnect:(SocketIO *)socket
 {
     NSLog(@"Connected %@", socket);
-    _connected = YES;
     _connectedBlock(socket);
     _connectedBlock = nil;
 }
 
 - (void)socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error
 {
-    _connected = NO;
-    NSLog(@"Socket error %@", error);
+    NSLog(@"Socket error %@\nAttempting reconnect %d of %d", error, _reconnectAttempts + 1, _maxReconnectAttempts);
+
+    if ( _reconnectAttempts < _maxReconnectAttempts ) {
+        [self connect];
+    }
 }
 - (void) socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet
 {

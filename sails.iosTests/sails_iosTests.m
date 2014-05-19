@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 #import "SailsIO.h"
+#define EXP_SHORTHAND
+#import <Expecta/Expecta.h>
 
 @interface sails_iosTests : XCTestCase
 
@@ -48,6 +50,11 @@
 - (void)testSailsHTTPNotNil
 {
     XCTAssertNotNil(_sails.http, @"http is nil");
+}
+
+- (void)testSocketNotNil
+{
+    expect(_sails.socket.socket).toNot.beNil();
 }
 
 @end

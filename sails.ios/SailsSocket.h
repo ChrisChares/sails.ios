@@ -20,7 +20,12 @@ typedef void(^SailsIODisconnectedBlock)(NSError *error, SocketIO *socket);
 
 @property (weak, nonatomic) SailsIO *sails;
 
-@property SocketIO *socket;
+@property (strong, readonly) SocketIO *socket;
+
+@property (strong, readonly) NSString *host;
+@property (readonly) NSInteger port;
+
+- (id)initWithSails:(SailsIO *)sails;
 
 - (void)connect;
 - (void)disconnect;

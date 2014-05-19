@@ -34,7 +34,7 @@ static SailsIO *instance;
         
         _baseURLString = url;
         _baseURL = [NSURL URLWithString:url];
-        _socket = [[SailsSocket alloc] init]; _socket.sails = self;
+        _socket = [[SailsSocket alloc] initWithSails:self];
         _http = [[SailsHTTP alloc] initWithBaseURL:_baseURL]; _http.sails = self;
         _router = [[SailsRouter alloc] initWithRoutes:@{}];
         _defaultProtocol = SailsProtocolHTTP;

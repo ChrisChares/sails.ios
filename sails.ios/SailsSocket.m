@@ -14,8 +14,7 @@
 
 @interface SailsSocket()
 
-@property NSString *host;
-@property NSInteger port;
+
 
 @property NSInteger reconnectAttempts;
 @property NSInteger maxReconnectAttempts;
@@ -24,11 +23,13 @@
 
 @implementation SailsSocket
 
-- (id)init
+
+- (id)initWithSails:(SailsIO *)sails
 {
     self = [super init];
     if ( self ) {
-        self.socket = [[SocketIO alloc] initWithDelegate:self];
+        _sails = sails;
+        _socket = [[SocketIO alloc] initWithDelegate:self];
         NSURL *baseURL = _sails.baseURL;
         _host = [baseURL host];
         _port = [[baseURL port] integerValue];
@@ -38,14 +39,25 @@
         }
         
         _maxReconnectAttempts = DEFAULT_MAX_RECONNECT_ATTEMPTS;
+
+        
     }
+    
     return self;
 }
 
 - (void)connect
 {
+    /*
+     We first must send an HTTP request to the domain in order to initialize the session
+     More information is available on the Sails website
+     */
+    [_sails get:@"/" data:nil protocol:SailsProtocolHTTP callback:^(NSError *error, id response) {
+       
+        [_socket connectToHost:_host onPort:_port];
 
-    [self.socket connectToHost:_host onPort:_port];
+        
+    }];
 
 }
 
@@ -99,8 +111,13 @@
 - (void)socketIODidConnect:(SocketIO *)socket
 {
     NSLog(@"Connected %@", socket);
-    _connectedBlock(socket);
-    _connectedBlock = nil;
+   // _socket = socket;
+   // _socket.delegate = self;
+    if ( _connectedBlock ) {
+        _connectedBlock(socket);
+        _connectedBlock = nil;
+    }
+
 }
 
 - (void)socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error

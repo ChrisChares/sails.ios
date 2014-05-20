@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "757574EC24204991BF6FC690"
-               BuildableName = "libPods-socket.IO.a"
-               BlueprintName = "Pods-socket.IO"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "836BC230192AD6AA00B37E12"
+               BuildableName = "liblibSails.a"
+               BlueprintName = "libSails"
+               ReferencedContainer = "container:sails.ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83B09076192333C900BBAA07"
+               BuildableName = "sails.iosTests.xctest"
+               BlueprintName = "sails.iosTests"
+               ReferencedContainer = "container:sails.ios.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "836BC28A192AD7C800B37E12"
+            BuildableName = "example.app"
+            BlueprintName = "example"
+            ReferencedContainer = "container:sails.ios.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -39,6 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "836BC28A192AD7C800B37E12"
+            BuildableName = "example.app"
+            BlueprintName = "example"
+            ReferencedContainer = "container:sails.ios.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

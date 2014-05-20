@@ -7,97 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		836BC2141925C32400B37E12 /* SailsSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2131925C32400B37E12 /* SailsSocket.m */; };
-		836BC2171925C36200B37E12 /* SailsHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2161925C36200B37E12 /* SailsHTTP.m */; };
-		836BC21D1925D24C00B37E12 /* SailsBaseResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC21C1925D24C00B37E12 /* SailsBaseResponseSerializer.m */; };
 		836BC21F1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC21E1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m */; };
 		836BC2211925DB0E00B37E12 /* SailsHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2201925DB0E00B37E12 /* SailsHTTPTests.m */; };
 		836BC2261925E07500B37E12 /* MockUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2251925E07500B37E12 /* MockUser.m */; };
 		836BC228192A8BE700B37E12 /* testSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC227192A8BE700B37E12 /* testSocket.m */; };
 		836BC22B192A953B00B37E12 /* MockPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC22A192A953B00B37E12 /* MockPost.m */; };
-		83B0905A192333C900BBAA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
-		83B0905C192333C900BBAA07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905B192333C900BBAA07 /* CoreGraphics.framework */; };
-		83B0905E192333C900BBAA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
-		83B09064192333C900BBAA07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83B09062192333C900BBAA07 /* InfoPlist.strings */; };
-		83B09066192333C900BBAA07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B09065192333C900BBAA07 /* main.m */; };
-		83B0906A192333C900BBAA07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B09069192333C900BBAA07 /* AppDelegate.m */; };
-		83B0906D192333C900BBAA07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B0906B192333C900BBAA07 /* Main.storyboard */; };
-		83B09070192333C900BBAA07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0906F192333C900BBAA07 /* ViewController.m */; };
-		83B09072192333C900BBAA07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B09071192333C900BBAA07 /* Images.xcassets */; };
+		836BC232192AD6AA00B37E12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
+		836BC28C192AD7C800B37E12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
+		836BC28D192AD7C800B37E12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905B192333C900BBAA07 /* CoreGraphics.framework */; };
+		836BC28E192AD7C800B37E12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
+		836BC294192AD7C800B37E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 836BC292192AD7C800B37E12 /* InfoPlist.strings */; };
+		836BC296192AD7C800B37E12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC295192AD7C800B37E12 /* main.m */; };
+		836BC29A192AD7C800B37E12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC299192AD7C800B37E12 /* AppDelegate.m */; };
+		836BC29D192AD7C800B37E12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836BC29B192AD7C800B37E12 /* Main.storyboard */; };
+		836BC2A0192AD7C800B37E12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC29F192AD7C800B37E12 /* ViewController.m */; };
+		836BC2A2192AD7C800B37E12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836BC2A1192AD7C800B37E12 /* Images.xcassets */; };
+		836BC2CD192AD84B00B37E12 /* SailsBaseResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2C2192AD84B00B37E12 /* SailsBaseResponseSerializer.m */; };
+		836BC2CE192AD84B00B37E12 /* SailsHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2C4192AD84B00B37E12 /* SailsHTTP.m */; };
+		836BC2CF192AD84B00B37E12 /* SailsIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2C6192AD84B00B37E12 /* SailsIO.m */; };
+		836BC2D0192AD84B00B37E12 /* SailsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2C8192AD84B00B37E12 /* SailsRouter.m */; };
+		836BC2D1192AD84B00B37E12 /* SailsSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 836BC2CB192AD84B00B37E12 /* SailsSocket.m */; };
+		836BC2D3192AD8C600B37E12 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836BC2D2192AD8C600B37E12 /* libPods.a */; };
+		8378648B192AD9D100242511 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8378648A192AD9D100242511 /* libPods.a */; };
+		8378648D192ADC4B00242511 /* liblibSails.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 836BC231192AD6AA00B37E12 /* liblibSails.a */; };
 		83B09079192333C900BBAA07 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09078192333C900BBAA07 /* XCTest.framework */; };
 		83B0907A192333C900BBAA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B09059192333C900BBAA07 /* Foundation.framework */; };
 		83B0907B192333C900BBAA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B0905D192333C900BBAA07 /* UIKit.framework */; };
 		83B09083192333C900BBAA07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83B09081192333C900BBAA07 /* InfoPlist.strings */; };
 		83B09085192333C900BBAA07 /* sails_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B09084192333C900BBAA07 /* sails_iosTests.m */; };
-		83B0909219235AB100BBAA07 /* SailsIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0909119235AB100BBAA07 /* SailsIO.m */; };
-		83B0909519235AD100BBAA07 /* SailsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0909419235AD100BBAA07 /* SailsRouter.m */; };
 		83B0909719235EE800BBAA07 /* SailsRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B0909619235EE800BBAA07 /* SailsRouterTests.m */; };
-		9DFE8F2C14DC496FA9898E97 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 405042540C56493CB4327FA1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		83B0907C192333C900BBAA07 /* PBXContainerItemProxy */ = {
+		836BC2D6192AD92D00B37E12 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83B0904E192333C900BBAA07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 83B09055192333C900BBAA07;
-			remoteInfo = sails.ios;
+			remoteGlobalIDString = 836BC230192AD6AA00B37E12;
+			remoteInfo = libSails;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		836BC22F192AD6AA00B37E12 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1277DB1D82A446AD83390C38 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		405042540C56493CB4327FA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		836BC2121925C32400B37E12 /* SailsSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsSocket.h; sourceTree = "<group>"; };
-		836BC2131925C32400B37E12 /* SailsSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsSocket.m; sourceTree = "<group>"; };
-		836BC2151925C36200B37E12 /* SailsHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsHTTP.h; sourceTree = "<group>"; };
-		836BC2161925C36200B37E12 /* SailsHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsHTTP.m; sourceTree = "<group>"; };
-		836BC2181925C52A00B37E12 /* SailsTransportProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsTransportProtocol.h; sourceTree = "<group>"; };
-		836BC21B1925D24C00B37E12 /* SailsBaseResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsBaseResponseSerializer.h; sourceTree = "<group>"; };
-		836BC21C1925D24C00B37E12 /* SailsBaseResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsBaseResponseSerializer.m; sourceTree = "<group>"; };
 		836BC21E1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsBaseResponseSerializerTests.m; sourceTree = "<group>"; };
 		836BC2201925DB0E00B37E12 /* SailsHTTPTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsHTTPTests.m; sourceTree = "<group>"; };
-		836BC2231925E02400B37E12 /* SailsSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsSerializable.h; sourceTree = "<group>"; };
 		836BC2241925E07500B37E12 /* MockUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockUser.h; sourceTree = "<group>"; };
 		836BC2251925E07500B37E12 /* MockUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockUser.m; sourceTree = "<group>"; };
 		836BC227192A8BE700B37E12 /* testSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testSocket.m; sourceTree = "<group>"; };
 		836BC229192A953B00B37E12 /* MockPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPost.h; sourceTree = "<group>"; };
 		836BC22A192A953B00B37E12 /* MockPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPost.m; sourceTree = "<group>"; };
-		83B09056192333C900BBAA07 /* sails.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sails.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		836BC231192AD6AA00B37E12 /* liblibSails.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibSails.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		836BC235192AD6AA00B37E12 /* libSails-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "libSails-Prefix.pch"; path = "libSails/libSails-Prefix.pch"; sourceTree = "<group>"; };
+		836BC28B192AD7C800B37E12 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		836BC291192AD7C800B37E12 /* example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "example-Info.plist"; sourceTree = "<group>"; };
+		836BC293192AD7C800B37E12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		836BC295192AD7C800B37E12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		836BC297192AD7C800B37E12 /* example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "example-Prefix.pch"; sourceTree = "<group>"; };
+		836BC298192AD7C800B37E12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		836BC299192AD7C800B37E12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		836BC29C192AD7C800B37E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		836BC29E192AD7C800B37E12 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		836BC29F192AD7C800B37E12 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		836BC2A1192AD7C800B37E12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		836BC2C1192AD84B00B37E12 /* SailsBaseResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsBaseResponseSerializer.h; path = libSails/SailsBaseResponseSerializer.h; sourceTree = SOURCE_ROOT; };
+		836BC2C2192AD84B00B37E12 /* SailsBaseResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsBaseResponseSerializer.m; path = libSails/SailsBaseResponseSerializer.m; sourceTree = SOURCE_ROOT; };
+		836BC2C3192AD84B00B37E12 /* SailsHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsHTTP.h; path = libSails/SailsHTTP.h; sourceTree = SOURCE_ROOT; };
+		836BC2C4192AD84B00B37E12 /* SailsHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsHTTP.m; path = libSails/SailsHTTP.m; sourceTree = SOURCE_ROOT; };
+		836BC2C5192AD84B00B37E12 /* SailsIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsIO.h; path = libSails/SailsIO.h; sourceTree = SOURCE_ROOT; };
+		836BC2C6192AD84B00B37E12 /* SailsIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsIO.m; path = libSails/SailsIO.m; sourceTree = SOURCE_ROOT; };
+		836BC2C7192AD84B00B37E12 /* SailsRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsRouter.h; path = libSails/SailsRouter.h; sourceTree = SOURCE_ROOT; };
+		836BC2C8192AD84B00B37E12 /* SailsRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsRouter.m; path = libSails/SailsRouter.m; sourceTree = SOURCE_ROOT; };
+		836BC2C9192AD84B00B37E12 /* SailsSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsSerializable.h; path = libSails/SailsSerializable.h; sourceTree = SOURCE_ROOT; };
+		836BC2CA192AD84B00B37E12 /* SailsSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsSocket.h; path = libSails/SailsSocket.h; sourceTree = SOURCE_ROOT; };
+		836BC2CB192AD84B00B37E12 /* SailsSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsSocket.m; path = libSails/SailsSocket.m; sourceTree = SOURCE_ROOT; };
+		836BC2CC192AD84B00B37E12 /* SailsTransportProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsTransportProtocol.h; path = libSails/SailsTransportProtocol.h; sourceTree = SOURCE_ROOT; };
+		836BC2D2192AD8C600B37E12 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		8378648A192AD9D100242511 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		83B09059192333C900BBAA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83B0905B192333C900BBAA07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		83B0905D192333C900BBAA07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		83B09061192333C900BBAA07 /* sails.ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sails.ios-Info.plist"; sourceTree = "<group>"; };
-		83B09063192333C900BBAA07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		83B09065192333C900BBAA07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		83B09067192333C900BBAA07 /* sails.ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sails.ios-Prefix.pch"; sourceTree = "<group>"; };
-		83B09068192333C900BBAA07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		83B09069192333C900BBAA07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		83B0906C192333C900BBAA07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		83B0906E192333C900BBAA07 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		83B0906F192333C900BBAA07 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		83B09071192333C900BBAA07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83B09077192333C900BBAA07 /* sails.iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sails.iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B09078192333C900BBAA07 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		83B09080192333C900BBAA07 /* sails.iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sails.iosTests-Info.plist"; sourceTree = "<group>"; };
 		83B09082192333C900BBAA07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83B09084192333C900BBAA07 /* sails_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sails_iosTests.m; sourceTree = "<group>"; };
-		83B0909019235AB100BBAA07 /* SailsIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsIO.h; sourceTree = "<group>"; };
-		83B0909119235AB100BBAA07 /* SailsIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsIO.m; sourceTree = "<group>"; };
-		83B0909319235AD100BBAA07 /* SailsRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SailsRouter.h; sourceTree = "<group>"; };
-		83B0909419235AD100BBAA07 /* SailsRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsRouter.m; sourceTree = "<group>"; };
 		83B0909619235EE800BBAA07 /* SailsRouterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsRouterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		83B09053192333C900BBAA07 /* Frameworks */ = {
+		836BC22E192AD6AA00B37E12 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B0905C192333C900BBAA07 /* CoreGraphics.framework in Frameworks */,
-				83B0905E192333C900BBAA07 /* UIKit.framework in Frameworks */,
-				83B0905A192333C900BBAA07 /* Foundation.framework in Frameworks */,
-				9DFE8F2C14DC496FA9898E97 /* libPods.a in Frameworks */,
+				836BC2D3192AD8C600B37E12 /* libPods.a in Frameworks */,
+				836BC232192AD6AA00B37E12 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		836BC288192AD7C800B37E12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8378648D192ADC4B00242511 /* liblibSails.a in Frameworks */,
+				836BC28D192AD7C800B37E12 /* CoreGraphics.framework in Frameworks */,
+				836BC28E192AD7C800B37E12 /* UIKit.framework in Frameworks */,
+				836BC28C192AD7C800B37E12 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8378648B192AD9D100242511 /* libPods.a in Frameworks */,
 				83B09079192333C900BBAA07 /* XCTest.framework in Frameworks */,
 				83B0907B192333C900BBAA07 /* UIKit.framework in Frameworks */,
 				83B0907A192333C900BBAA07 /* Foundation.framework in Frameworks */,
@@ -114,41 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		836BC2191925C6B100B37E12 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				836BC2221925DFD600B37E12 /* serialization */,
-				836BC21A1925CF4800B37E12 /* Protocols */,
-				83B0909019235AB100BBAA07 /* SailsIO.h */,
-				83B0909119235AB100BBAA07 /* SailsIO.m */,
-				83B0909319235AD100BBAA07 /* SailsRouter.h */,
-				83B0909419235AD100BBAA07 /* SailsRouter.m */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		836BC21A1925CF4800B37E12 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				836BC2181925C52A00B37E12 /* SailsTransportProtocol.h */,
-				836BC2121925C32400B37E12 /* SailsSocket.h */,
-				836BC2131925C32400B37E12 /* SailsSocket.m */,
-				836BC2151925C36200B37E12 /* SailsHTTP.h */,
-				836BC2161925C36200B37E12 /* SailsHTTP.m */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		836BC2221925DFD600B37E12 /* serialization */ = {
-			isa = PBXGroup;
-			children = (
-				836BC21B1925D24C00B37E12 /* SailsBaseResponseSerializer.h */,
-				836BC21C1925D24C00B37E12 /* SailsBaseResponseSerializer.m */,
-				836BC2231925E02400B37E12 /* SailsSerializable.h */,
-			);
-			name = serialization;
-			sourceTree = "<group>";
-		};
 		836BC22C192A956300B37E12 /* Mock Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,11 +154,57 @@
 			name = "Mock Objects";
 			sourceTree = "<group>";
 		};
+		836BC28F192AD7C800B37E12 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				836BC298192AD7C800B37E12 /* AppDelegate.h */,
+				836BC299192AD7C800B37E12 /* AppDelegate.m */,
+				836BC29B192AD7C800B37E12 /* Main.storyboard */,
+				836BC29E192AD7C800B37E12 /* ViewController.h */,
+				836BC29F192AD7C800B37E12 /* ViewController.m */,
+				836BC2A1192AD7C800B37E12 /* Images.xcassets */,
+				836BC290192AD7C800B37E12 /* Supporting Files */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		836BC290192AD7C800B37E12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				836BC291192AD7C800B37E12 /* example-Info.plist */,
+				836BC292192AD7C800B37E12 /* InfoPlist.strings */,
+				836BC295192AD7C800B37E12 /* main.m */,
+				836BC297192AD7C800B37E12 /* example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		836BC2C0192AD83500B37E12 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				836BC235192AD6AA00B37E12 /* libSails-Prefix.pch */,
+				836BC2C1192AD84B00B37E12 /* SailsBaseResponseSerializer.h */,
+				836BC2C2192AD84B00B37E12 /* SailsBaseResponseSerializer.m */,
+				836BC2C3192AD84B00B37E12 /* SailsHTTP.h */,
+				836BC2C4192AD84B00B37E12 /* SailsHTTP.m */,
+				836BC2C5192AD84B00B37E12 /* SailsIO.h */,
+				836BC2C6192AD84B00B37E12 /* SailsIO.m */,
+				836BC2C7192AD84B00B37E12 /* SailsRouter.h */,
+				836BC2C8192AD84B00B37E12 /* SailsRouter.m */,
+				836BC2C9192AD84B00B37E12 /* SailsSerializable.h */,
+				836BC2CA192AD84B00B37E12 /* SailsSocket.h */,
+				836BC2CB192AD84B00B37E12 /* SailsSocket.m */,
+				836BC2CC192AD84B00B37E12 /* SailsTransportProtocol.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		83B0904D192333C900BBAA07 = {
 			isa = PBXGroup;
 			children = (
 				83B0905F192333C900BBAA07 /* sails.ios */,
-				83B0907E192333C900BBAA07 /* sails.iosTests */,
+				83B0907E192333C900BBAA07 /* tests */,
+				836BC28F192AD7C800B37E12 /* example */,
 				83B09058192333C900BBAA07 /* Frameworks */,
 				83B09057192333C900BBAA07 /* Products */,
 				1277DB1D82A446AD83390C38 /* Pods.xcconfig */,
@@ -174,8 +214,9 @@
 		83B09057192333C900BBAA07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83B09056192333C900BBAA07 /* sails.ios.app */,
 				83B09077192333C900BBAA07 /* sails.iosTests.xctest */,
+				836BC231192AD6AA00B37E12 /* liblibSails.a */,
+				836BC28B192AD7C800B37E12 /* example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +224,8 @@
 		83B09058192333C900BBAA07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8378648A192AD9D100242511 /* libPods.a */,
+				836BC2D2192AD8C600B37E12 /* libPods.a */,
 				83B09059192333C900BBAA07 /* Foundation.framework */,
 				83B0905B192333C900BBAA07 /* CoreGraphics.framework */,
 				83B0905D192333C900BBAA07 /* UIKit.framework */,
@@ -195,36 +238,23 @@
 		83B0905F192333C900BBAA07 /* sails.ios */ = {
 			isa = PBXGroup;
 			children = (
-				836BC2191925C6B100B37E12 /* src */,
-				83B0908F192333F900BBAA07 /* example */,
-				83B0908E192333E200BBAA07 /* sails.ios */,
-				83B09060192333C900BBAA07 /* Supporting Files */,
+				836BC2C0192AD83500B37E12 /* src */,
 			);
 			path = sails.ios;
 			sourceTree = "<group>";
 		};
-		83B09060192333C900BBAA07 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				83B09061192333C900BBAA07 /* sails.ios-Info.plist */,
-				83B09062192333C900BBAA07 /* InfoPlist.strings */,
-				83B09065192333C900BBAA07 /* main.m */,
-				83B09067192333C900BBAA07 /* sails.ios-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		83B0907E192333C900BBAA07 /* sails.iosTests */ = {
+		83B0907E192333C900BBAA07 /* tests */ = {
 			isa = PBXGroup;
 			children = (
 				836BC22C192A956300B37E12 /* Mock Objects */,
-				83B09084192333C900BBAA07 /* sails_iosTests.m */,
 				83B0907F192333C900BBAA07 /* Supporting Files */,
+				83B09084192333C900BBAA07 /* sails_iosTests.m */,
 				83B0909619235EE800BBAA07 /* SailsRouterTests.m */,
 				836BC21E1925D5F100B37E12 /* SailsBaseResponseSerializerTests.m */,
 				836BC2201925DB0E00B37E12 /* SailsHTTPTests.m */,
 				836BC227192A8BE700B37E12 /* testSocket.m */,
 			);
+			name = tests;
 			path = sails.iosTests;
 			sourceTree = "<group>";
 		};
@@ -237,46 +267,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		83B0908E192333E200BBAA07 /* sails.ios */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = sails.ios;
-			sourceTree = "<group>";
-		};
-		83B0908F192333F900BBAA07 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				83B09068192333C900BBAA07 /* AppDelegate.h */,
-				83B09069192333C900BBAA07 /* AppDelegate.m */,
-				83B0906B192333C900BBAA07 /* Main.storyboard */,
-				83B0906E192333C900BBAA07 /* ViewController.h */,
-				83B0906F192333C900BBAA07 /* ViewController.m */,
-				83B09071192333C900BBAA07 /* Images.xcassets */,
-			);
-			name = example;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83B09055192333C900BBAA07 /* sails.ios */ = {
+		836BC230192AD6AA00B37E12 /* libSails */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83B09088192333C900BBAA07 /* Build configuration list for PBXNativeTarget "sails.ios" */;
+			buildConfigurationList = 836BC24D192AD6AA00B37E12 /* Build configuration list for PBXNativeTarget "libSails" */;
 			buildPhases = (
-				B65DBEC706E6458CA1D02EE6 /* Check Pods Manifest.lock */,
-				83B09052192333C900BBAA07 /* Sources */,
-				83B09053192333C900BBAA07 /* Frameworks */,
-				83B09054192333C900BBAA07 /* Resources */,
-				5C1658B6A0E246B199A22D5B /* Copy Pods Resources */,
+				836BC22D192AD6AA00B37E12 /* Sources */,
+				836BC22E192AD6AA00B37E12 /* Frameworks */,
+				836BC22F192AD6AA00B37E12 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = sails.ios;
-			productName = sails.ios;
-			productReference = 83B09056192333C900BBAA07 /* sails.ios.app */;
+			name = libSails;
+			productName = libSails;
+			productReference = 836BC231192AD6AA00B37E12 /* liblibSails.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		836BC28A192AD7C800B37E12 /* example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 836BC2B5192AD7C900B37E12 /* Build configuration list for PBXNativeTarget "example" */;
+			buildPhases = (
+				836BC287192AD7C800B37E12 /* Sources */,
+				836BC288192AD7C800B37E12 /* Frameworks */,
+				836BC289192AD7C800B37E12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				836BC2D7192AD92D00B37E12 /* PBXTargetDependency */,
+			);
+			name = example;
+			productName = example;
+			productReference = 836BC28B192AD7C800B37E12 /* example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		83B09076192333C900BBAA07 /* sails.iosTests */ = {
@@ -290,7 +316,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				83B0907D192333C900BBAA07 /* PBXTargetDependency */,
 			);
 			name = sails.iosTests;
 			productName = sails.iosTests;
@@ -324,20 +349,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83B09055192333C900BBAA07 /* sails.ios */,
+				836BC230192AD6AA00B37E12 /* libSails */,
 				83B09076192333C900BBAA07 /* sails.iosTests */,
+				836BC28A192AD7C800B37E12 /* example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		83B09054192333C900BBAA07 /* Resources */ = {
+		836BC289192AD7C800B37E12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B09072192333C900BBAA07 /* Images.xcassets in Resources */,
-				83B09064192333C900BBAA07 /* InfoPlist.strings in Resources */,
-				83B0906D192333C900BBAA07 /* Main.storyboard in Resources */,
+				836BC2A2192AD7C800B37E12 /* Images.xcassets in Resources */,
+				836BC294192AD7C800B37E12 /* InfoPlist.strings in Resources */,
+				836BC29D192AD7C800B37E12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,52 +377,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		5C1658B6A0E246B199A22D5B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B65DBEC706E6458CA1D02EE6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		83B09052192333C900BBAA07 /* Sources */ = {
+		836BC22D192AD6AA00B37E12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836BC21D1925D24C00B37E12 /* SailsBaseResponseSerializer.m in Sources */,
-				83B0909219235AB100BBAA07 /* SailsIO.m in Sources */,
-				836BC2171925C36200B37E12 /* SailsHTTP.m in Sources */,
-				83B09070192333C900BBAA07 /* ViewController.m in Sources */,
-				83B0906A192333C900BBAA07 /* AppDelegate.m in Sources */,
-				836BC2141925C32400B37E12 /* SailsSocket.m in Sources */,
-				83B0909519235AD100BBAA07 /* SailsRouter.m in Sources */,
-				83B09066192333C900BBAA07 /* main.m in Sources */,
+				836BC2CF192AD84B00B37E12 /* SailsIO.m in Sources */,
+				836BC2CD192AD84B00B37E12 /* SailsBaseResponseSerializer.m in Sources */,
+				836BC2CE192AD84B00B37E12 /* SailsHTTP.m in Sources */,
+				836BC2D1192AD84B00B37E12 /* SailsSocket.m in Sources */,
+				836BC2D0192AD84B00B37E12 /* SailsRouter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		836BC287192AD7C800B37E12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836BC2A0192AD7C800B37E12 /* ViewController.m in Sources */,
+				836BC29A192AD7C800B37E12 /* AppDelegate.m in Sources */,
+				836BC296192AD7C800B37E12 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,26 +417,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		83B0907D192333C900BBAA07 /* PBXTargetDependency */ = {
+		836BC2D7192AD92D00B37E12 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83B09055192333C900BBAA07 /* sails.ios */;
-			targetProxy = 83B0907C192333C900BBAA07 /* PBXContainerItemProxy */;
+			target = 836BC230192AD6AA00B37E12 /* libSails */;
+			targetProxy = 836BC2D6192AD92D00B37E12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		83B09062192333C900BBAA07 /* InfoPlist.strings */ = {
+		836BC292192AD7C800B37E12 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				83B09063192333C900BBAA07 /* en */,
+				836BC293192AD7C800B37E12 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		83B0906B192333C900BBAA07 /* Main.storyboard */ = {
+		836BC29B192AD7C800B37E12 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				83B0906C192333C900BBAA07 /* Base */,
+				836BC29C192AD7C800B37E12 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -452,6 +452,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		836BC24E192AD6AA00B37E12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/libSails.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libSails/libSails-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		836BC24F192AD6AA00B37E12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/libSails.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libSails/libSails-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		836BC2B6192AD7C900B37E12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "example/example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "example/example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		836BC2B7192AD7C900B37E12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "example/example-Prefix.pch";
+				INFOPLIST_FILE = "example/example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		83B09086192333C900BBAA07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -516,37 +578,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		83B09089192333C900BBAA07 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sails.ios/sails.ios-Prefix.pch";
-				INFOPLIST_FILE = "sails.ios/sails.ios-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		83B0908A192333C900BBAA07 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sails.ios/sails.ios-Prefix.pch";
-				INFOPLIST_FILE = "sails.ios/sails.ios-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -554,14 +588,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sails.ios.app/sails.ios";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/example.app/example";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sails.ios/sails.ios-Prefix.pch";
+				GCC_PREFIX_HEADER = "example/example-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -577,14 +611,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1277DB1D82A446AD83390C38 /* Pods.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sails.ios.app/sails.ios";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/example.app/example";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sails.ios/sails.ios-Prefix.pch";
+				GCC_PREFIX_HEADER = "example/example-Prefix.pch";
 				INFOPLIST_FILE = "sails.iosTests/sails.iosTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -595,20 +629,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		836BC24D192AD6AA00B37E12 /* Build configuration list for PBXNativeTarget "libSails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836BC24E192AD6AA00B37E12 /* Debug */,
+				836BC24F192AD6AA00B37E12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		836BC2B5192AD7C900B37E12 /* Build configuration list for PBXNativeTarget "example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836BC2B6192AD7C900B37E12 /* Debug */,
+				836BC2B7192AD7C900B37E12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83B09051192333C900BBAA07 /* Build configuration list for PBXProject "sails.ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83B09086192333C900BBAA07 /* Debug */,
 				83B09087192333C900BBAA07 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83B09088192333C900BBAA07 /* Build configuration list for PBXNativeTarget "sails.ios" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83B09089192333C900BBAA07 /* Debug */,
-				83B0908A192333C900BBAA07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

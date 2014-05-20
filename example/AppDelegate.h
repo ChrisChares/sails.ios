@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  sails.ios
+//  example
 //
-//  Created by Chris on 5/13/14.
+//  Created by Chris Chares on 5/19/14.
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 

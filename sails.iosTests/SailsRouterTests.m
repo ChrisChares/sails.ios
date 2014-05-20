@@ -10,6 +10,8 @@
 #import "SailsRouter.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SOCKit/SOCKit.h>
+#define EXP_SHORTHAND
+#import <Expecta/Expecta.h>
 
 #define route1 @"/event/:id/timeline"
 #define route2 @"/user/:id/events"
@@ -43,7 +45,8 @@
 - (void)testReturnsTypeSOCPattern
 {
     id object = [[[_router.routes keyEnumerator] allObjects] firstObject];
-    XCTAssert([object isKindOfClass:[SOCPattern class]], @"Router isn't returning types of socpatterns");
+    NSLog(@"shit %@", [object class]);
+    expect(object).to.beKindOf([SOCPattern class]);
 }
 
 - (void)testMatchFirstRoute

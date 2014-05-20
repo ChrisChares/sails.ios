@@ -1,19 +1,22 @@
 //
 //  AppDelegate.m
-//  sails.ios
+//  example
 //
-//  Created by Chris on 5/13/14.
+//  Created by Chris Chares on 5/19/14.
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "SailsIO.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    SailsIO *sails = [[SailsIO alloc] init];
     return YES;
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

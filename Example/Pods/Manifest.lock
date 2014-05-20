@@ -1,0 +1,50 @@
+PODS:
+  - AFNetworking (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.2.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.4):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Expecta (0.3.0)
+  - OHHTTPStubs (3.1.1)
+  - sails (0.1.0):
+    - AFNetworking (~> 2.2.1)
+    - socket.IO (~> 0.5.2)
+    - SOCKit (~> 1.1)
+  - socket.IO (0.5.2):
+    - SocketRocket (~> 0.2)
+  - SocketRocket (0.3.1-beta2)
+  - SOCKit (1.1)
+
+DEPENDENCIES:
+  - Expecta (~> 0.3.0)
+  - OHHTTPStubs (~> 3.1.1)
+  - sails (from `../`)
+
+EXTERNAL SOURCES:
+  sails:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFNetworking: 01aa7c3aa9a200b94943e54072a4373f14b3d219
+  Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
+  OHHTTPStubs: be1c4263e49191b586d8313dcd6068da6f699d2c
+  sails: 7adb78842333bfb28acc72a98cc4ccc8084b6fee
+  socket.IO: 10f35e5bb4c6d272f652221c63eae9a3a82d0b0e
+  SocketRocket: 7ac946bcce46287a791dfff3c1f8daa692821dae
+  SOCKit: 8871d058926a6c6cc144f0c5eee82c5d0ec274a3
+
+COCOAPODS: 0.32.1

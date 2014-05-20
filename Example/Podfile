@@ -1,7 +1,7 @@
 pod "sails", :path => "../"
 
-target "Demo" do
-end
 
-target "DemoTests" do
+target "ExampleTests" do
+pod 'OHHTTPStubs', '~> 3.1.1'
+pod 'Expecta', '~> 0.3.0'
 end

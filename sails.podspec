@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "sails"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "iOS client for interacting with sails.js apps over http or ws"
   s.description      = <<-DESC
                        I was told this could be optional

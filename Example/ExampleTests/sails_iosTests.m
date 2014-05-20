@@ -41,7 +41,7 @@
 - (void)testSetDefaultsWorks
 {
     [SailsIOS setDefaultInstance:_sails];
-    XCTAssertNotNil([SailsIO defaultInstance], @"Default instance is null");
+    XCTAssertNotNil([SailsIOS defaultInstance], @"Default instance is null");
 }
 - (void)testSailsSocketsNotNil
 {

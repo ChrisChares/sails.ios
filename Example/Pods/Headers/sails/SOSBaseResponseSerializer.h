@@ -1,0 +1,1 @@
+../../../../Classes/ios/SOSBaseResponseSerializer.h

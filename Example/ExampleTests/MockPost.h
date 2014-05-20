@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SailsSerializable.h"
+#import "SOSSerializable.h"
 
-@interface MockPost : NSObject <SailsSerializable>
+@interface MockPost : NSObject <SOSSerializable>
 
 @property NSString *title;
 

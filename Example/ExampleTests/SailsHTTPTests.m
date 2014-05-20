@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 #import <OHHTTPStubs/OHHTTPStubs.h>
 #import <OHHTTPStubs/OHHTTPStubsResponse+JSON.h>
-#import "SailsIO.H"
+#import "SailsIOS.h"
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
 #import "MockUser.h"
@@ -29,7 +29,7 @@
     [super setUp];
     
     _sails = [[SailsIOS alloc] initWithBaseURLString:@"http://localhost:1337"];
-    _sails.defaultProtocol = SailsProtocolHTTP;
+    _sails.defaultProtocol = SOSProtocolHTTP;
     
     _testModel = [MockUser testTwo];
     

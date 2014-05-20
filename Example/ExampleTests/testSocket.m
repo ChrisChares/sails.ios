@@ -28,7 +28,7 @@
     [super setUp];
 
     _sails = [[SailsIOS alloc] initWithBaseURLString:@"http://localhost:1337"];
-    _sails.defaultProtocol = SailsProtocolSockets;
+    _sails.defaultProtocol = SOSProtocolSockets;
 }
 
 - (void)tearDown

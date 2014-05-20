@@ -28,11 +28,6 @@
 		837864DC192AE85D00242511 /* SailsHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864D5192AE85D00242511 /* SailsHTTPTests.m */; };
 		837864DD192AE85D00242511 /* SailsRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864D6192AE85D00242511 /* SailsRouterTests.m */; };
 		837864DE192AE85D00242511 /* testSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864D7192AE85D00242511 /* testSocket.m */; };
-		837864EC192AE91B00242511 /* SOSBaseResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864E1192AE91B00242511 /* SOSBaseResponseSerializer.m */; };
-		837864ED192AE91B00242511 /* SOSHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864E3192AE91B00242511 /* SOSHTTP.m */; };
-		837864EE192AE91B00242511 /* SailsIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864E5192AE91B00242511 /* SailsIOS.m */; };
-		837864EF192AE91B00242511 /* SOSRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864E7192AE91B00242511 /* SOSRouter.m */; };
-		837864F0192AE91B00242511 /* SOSSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864EA192AE91B00242511 /* SOSSocket.m */; };
 		B61E12FC4DED433D9508C3AD /* libPods-ExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F555E38FC4B437681EF31DB /* libPods-ExampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -387,14 +382,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837864EE192AE91B00242511 /* SailsIOS.m in Sources */,
-				837864EC192AE91B00242511 /* SOSBaseResponseSerializer.m in Sources */,
-				837864ED192AE91B00242511 /* SOSHTTP.m in Sources */,
 				837864B1192AE65000242511 /* ViewController.m in Sources */,
 				837864AB192AE65000242511 /* AppDelegate.m in Sources */,
-				837864F0192AE91B00242511 /* SOSSocket.m in Sources */,
 				837864A7192AE65000242511 /* main.m in Sources */,
-				837864EF192AE91B00242511 /* SOSRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
 #import <SOCKit/SOCKit.h>
 
 
-@interface SailsRouter : NSObject
+@interface SOSRouter : NSObject
 
 
 - (id)initWithRoutes:(NSDictionary *)routes;

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <SailsIO.h>
+//#import <SailsIOS.h>
 
 @implementation AppDelegate
 
@@ -15,7 +15,7 @@
 {
     // Override point for customization after application launch.
     
-    SailsIO *sails = [[SailsIO alloc] init];
+  //  SailsIOS *sails = [[SailsIOS alloc] init];
     return YES;
 }
 							

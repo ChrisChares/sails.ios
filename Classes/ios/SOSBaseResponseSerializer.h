@@ -15,7 +15,7 @@
  */
 
 
-@interface SailsBaseResponseSerializer : AFJSONResponseSerializer
+@interface SOSBaseResponseSerializer : AFJSONResponseSerializer
 
 //set me to utilize SailsSerializable model methods
 @property  Class modelClass;

@@ -9,23 +9,23 @@
 #import <Foundation/Foundation.h>
 #import <socket.IO/SocketIO.h>
 //#import "SailsIO.h"
-#import "SailsTransportProtocol.h"
+#import "SOSTransportProtocol.h"
 
-@class SailsIO;
+@class SailsIOS;
 
 typedef void(^SailsIOConnectedBlock)(SocketIO *socket);
 typedef void(^SailsIODisconnectedBlock)(NSError *error, SocketIO *socket);
 
-@interface SailsSocket : NSObject <SocketIODelegate, SailsTransportProtocol>
+@interface SOSSocket : NSObject <SocketIODelegate, SOSTransportProtocol>
 
-@property (weak, nonatomic) SailsIO *sails;
+@property (weak, nonatomic) SailsIOS *sails;
 
 @property (strong, readonly) SocketIO *socket;
 
 @property (strong, readonly) NSString *host;
 @property (readonly) NSInteger port;
 
-- (id)initWithSails:(SailsIO *)sails;
+- (id)initWithSails:(SailsIOS *)sails;
 
 - (void)connect;
 - (void)disconnect;

@@ -7,22 +7,22 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SailsBaseResponseSerializer.h"
+#import "SOSBaseResponseSerializer.h"
 #import <OHHTTPStubs.h>
 #import <OHHTTPStubsResponse+JSON.h>
 #import "MockUser.h"
-#import "SailsIO.h"
+#import "SailsIOS.h"
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
 
 @interface SailsBaseResponseSerializerTests : XCTestCase
 
-@property SailsBaseResponseSerializer *serializer;
+@property SOSBaseResponseSerializer *serializer;
 
 @property MockUser *testModel1;
 @property MockUser *testModel2;
 
-@property SailsIO *sails;
+@property SailsIOS *sails;
 
 @property id result;
 
@@ -34,8 +34,8 @@
 {
     [super setUp];
     
-    _sails = [[SailsIO alloc] initWithBaseURLString:@"http://www.google.com"];
-    _serializer = [[SailsBaseResponseSerializer alloc] init];
+    _sails = [[SailsIOS alloc] initWithBaseURLString:@"http://www.google.com"];
+    _serializer = [[SOSBaseResponseSerializer alloc] init];
     
     _testModel1 = [MockUser testOne];
     _testModel2 = [MockUser testTwo];
@@ -134,10 +134,10 @@
 
 - (void)testCustomRouteSerializer
 {
-    SailsBaseResponseSerializer *serializer = [[SailsBaseResponseSerializer alloc] init];
+    SOSBaseResponseSerializer *serializer = [[SOSBaseResponseSerializer alloc] init];
     serializer.modelClass = [MockUser class];
     
-    SailsRouter *router = [[SailsRouter alloc] initWithRoutes:@{@"/event/:id/content": serializer}];
+    SOSRouter *router = [[SOSRouter alloc] initWithRoutes:@{@"/event/:id/content": serializer}];
     _sails.router = router;
     
  //   __block id responseObject;

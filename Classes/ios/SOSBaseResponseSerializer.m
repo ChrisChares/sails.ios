@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
-#import "SailsBaseResponseSerializer.h"
-#import "SailsSerializable.h"
+#import "SOSBaseResponseSerializer.h"
+#import "SOSSerializable.h"
 
-@implementation SailsBaseResponseSerializer
+@implementation SOSBaseResponseSerializer
 
 - (id)init
 {

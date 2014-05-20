@@ -6,25 +6,25 @@
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
-#import "SailsIO.h"
-#import "SailsSerializable.h"
+#import "SailsIOS.h"
+#import "SOSSerializable.h"
 
-@interface SailsIO()
+@interface SailsIOS()
 
 
 
 @end
 
 
-@implementation SailsIO
+@implementation SailsIOS
 
 
-static SailsIO *instance;
-+ (SailsIO *)defaultInstance
+static SailsIOS *instance;
++ (SailsIOS *)defaultInstance
 {
     return instance;
 }
-+ (void)setDefaultInstance:(SailsIO *)anInstance
++ (void)setDefaultInstance:(SailsIOS *)anInstance
 {
     instance = anInstance;
 }
@@ -36,10 +36,10 @@ static SailsIO *instance;
         
         _baseURLString = url;
         _baseURL = [NSURL URLWithString:url];
-        _socket = [[SailsSocket alloc] initWithSails:self];
-        _http = [[SailsHTTP alloc] initWithBaseURL:_baseURL]; _http.sails = self;
-        _router = [[SailsRouter alloc] initWithRoutes:@{}];
-        _defaultProtocol = SailsProtocolHTTP;
+        _socket = [[SOSSocket alloc] initWithSails:self];
+        _http = [[SOSHTTP alloc] initWithBaseURL:_baseURL]; _http.sails = self;
+        _router = [[SOSRouter alloc] initWithRoutes:@{}];
+        _defaultProtocol = SOSProtocolHTTP;
         
     }
     
@@ -54,47 +54,47 @@ static SailsIO *instance;
 {
     if ( [object isKindOfClass:[NSDictionary class]] || [object isKindOfClass:[NSMutableDictionary class]]) {
         return object;
-    } else if ( [[object class] conformsToProtocol:@protocol(SailsSerializable) ]) {
+    } else if ( [[object class] conformsToProtocol:@protocol(SOSSerializable) ]) {
         return [object toDictionary];
     } else {
         NSLog(@"Request data object must either be a dictionary or a class that conforms to SailsSerializable");
         return nil;
     }
 }
-- (void)get:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb
+- (void)get:(NSString *)url data:(id)data protocol:(SOSProtocol)protocol callback:(SailsIOBlock)cb
 {
     id requestData = [self requestDataForObject:data];
-    if ( protocol == SailsProtocolSockets ) {
+    if ( protocol == SOSProtocolSockets ) {
         [self.socket get:url data:requestData callback:cb];
     } else {
         [self.http get:url data:requestData callback:cb];
     }
 }
 
-- (void)post:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb
+- (void)post:(NSString *)url data:(id)data protocol:(SOSProtocol)protocol callback:(SailsIOBlock)cb
 {
     id requestData = [self requestDataForObject:data];
-    if ( protocol == SailsProtocolSockets ) {
+    if ( protocol == SOSProtocolSockets ) {
         [self.socket post:url data:requestData callback:cb];
     } else {
         [self.http post:url data:requestData callback:cb];
     }
 }
 
-- (void)put:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb
+- (void)put:(NSString *)url data:(id)data protocol:(SOSProtocol)protocol callback:(SailsIOBlock)cb
 {
     id requestData = [self requestDataForObject:data];
-    if ( protocol == SailsProtocolSockets ) {
+    if ( protocol == SOSProtocolSockets ) {
         [self.socket put:url data:requestData callback:cb];
     } else {
         [self.http put:url data:requestData callback:cb];
     }
 }
 
-- (void)delete:(NSString *)url data:(id)data protocol:(SailsProtocol)protocol callback:(SailsIOBlock)cb
+- (void)delete:(NSString *)url data:(id)data protocol:(SOSProtocol)protocol callback:(SailsIOBlock)cb
 {
     id requestData = [self requestDataForObject:data];
-    if ( protocol == SailsProtocolSockets ) {
+    if ( protocol == SOSProtocolSockets ) {
         [self.socket delete:url data:requestData callback:cb];
     } else {
         [self.http delete:url data:requestData callback:cb];

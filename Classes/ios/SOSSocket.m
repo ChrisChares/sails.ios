@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
-#import "SailsSocket.h"
-#import "SailsIO.h"
+#import "SOSSocket.h"
+#import "SailsIOS.h"
 
 #define DEFAULT_MAX_RECONNECT_ATTEMPTS 3
 
 
-@interface SailsSocket()
+@interface SOSSocket()
 
 
 
@@ -21,10 +21,10 @@
 @end
 
 
-@implementation SailsSocket
+@implementation SOSSocket
 
 
-- (id)initWithSails:(SailsIO *)sails
+- (id)initWithSails:(SailsIOS *)sails
 {
     self = [super init];
     if ( self ) {
@@ -52,7 +52,7 @@
      We first must send an HTTP request to the domain in order to initialize the session
      More information is available on the Sails website
      */
-    [_sails get:@"/" data:nil protocol:SailsProtocolHTTP callback:^(NSError *error, id response) {
+    [_sails get:@"/" data:nil protocol:SOSProtocolHTTP callback:^(NSError *error, id response) {
        
         [_socket connectToHost:_host onPort:_port];
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
-#import "SailsHTTP.h"
-#import "SailsIO.h"
-@implementation SailsHTTP
+#import "SOSHTTP.h"
+#import "SailsIOS.h"
+@implementation SOSHTTP
 
 - (void)get:(NSString *)url data:(id)data callback:(SailsIOBlock)cb
 {

@@ -9,14 +9,14 @@
 #import <XCTest/XCTest.h>
 #define EXP_SHORTHAND
 #import <Expecta/Expecta.h>
-#import "SailsIO.h"
+#import "SailsIOS.h"
 #import "MockUser.h"
 #import "MockPost.h"
 
 
 @interface testSocket : XCTestCase
 
-@property SailsIO *sails;
+@property SailsIOS *sails;
 
 
 @end
@@ -27,7 +27,7 @@
 {
     [super setUp];
 
-    _sails = [[SailsIO alloc] initWithBaseURLString:@"http://localhost:1337"];
+    _sails = [[SailsIOS alloc] initWithBaseURLString:@"http://localhost:1337"];
     _sails.defaultProtocol = SailsProtocolSockets;
 }
 

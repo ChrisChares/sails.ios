@@ -16,7 +16,7 @@
 
 @interface SailsHTTPTests : XCTestCase
 
-@property SailsIO *sails;
+@property SailsIOS *sails;
 
 @property MockUser *testModel;
 
@@ -28,7 +28,7 @@
 {
     [super setUp];
     
-    _sails = [[SailsIO alloc] initWithBaseURLString:@"http://localhost:1337"];
+    _sails = [[SailsIOS alloc] initWithBaseURLString:@"http://localhost:1337"];
     _sails.defaultProtocol = SailsProtocolHTTP;
     
     _testModel = [MockUser testTwo];

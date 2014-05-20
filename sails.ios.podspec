@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ChrisChares/sails.ios.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/ChrisChares/sails.ios.git", :tag => "0.1.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "sails.ios", "sails.ios/**/*.{h,m}"
+  s.source_files  = "libsails", "libsails/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -132,5 +132,8 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-
+  
+  s.dependency 'SOCKit', '~> 1.1'
+  s.dependency 'AFNetworking', '~> 2.2.1'
+  s.dependency 'socket.IO', '~> 0.5.2'
 end

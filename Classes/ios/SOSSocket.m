@@ -91,11 +91,17 @@
     NSDictionary *payload = @{ @"url" : url,
                                @"data" : data
                                };
+    AFHTTPResponseSerializer *serializer = [_sails.router responseSerializerForURL:url];
+    
+    NSHTTPURLResponse *mockResponse = [[NSHTTPURLResponse alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", _sails.baseURLString, url]]
+                                                                  statusCode:200
+                                                                 HTTPVersion:@"HTTP/1.1"
+                                                                headerFields:@{@"Content-Type": @"application/json"}];
+    
+    
     [self.socket sendEvent:method withData:payload andAcknowledge:^(id argsData) {
-        
         NSError *error;
-        NSData *data = [argsData dataUsingEncoding:NSUTF8StringEncoding];
-        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+        id result = [serializer responseObjectForResponse:mockResponse data:argsData error:&error];
         if ( error ) {
             NSLog(@"%@", error);
             cb(error, nil);

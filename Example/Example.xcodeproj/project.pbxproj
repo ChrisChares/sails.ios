@@ -28,6 +28,11 @@
 		837864DC192AE85D00242511 /* SailsHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864D5192AE85D00242511 /* SailsHTTPTests.m */; };
 		837864DD192AE85D00242511 /* SailsRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864D6192AE85D00242511 /* SailsRouterTests.m */; };
 		837864DE192AE85D00242511 /* testSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864D7192AE85D00242511 /* testSocket.m */; };
+		837864EC192AE91B00242511 /* SailsBaseResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864E1192AE91B00242511 /* SailsBaseResponseSerializer.m */; };
+		837864ED192AE91B00242511 /* SailsHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864E3192AE91B00242511 /* SailsHTTP.m */; };
+		837864EE192AE91B00242511 /* SailsIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864E5192AE91B00242511 /* SailsIO.m */; };
+		837864EF192AE91B00242511 /* SailsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864E7192AE91B00242511 /* SailsRouter.m */; };
+		837864F0192AE91B00242511 /* SailsSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 837864EA192AE91B00242511 /* SailsSocket.m */; };
 		B61E12FC4DED433D9508C3AD /* libPods-ExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F555E38FC4B437681EF31DB /* libPods-ExampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +78,18 @@
 		837864D5192AE85D00242511 /* SailsHTTPTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsHTTPTests.m; sourceTree = "<group>"; };
 		837864D6192AE85D00242511 /* SailsRouterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SailsRouterTests.m; sourceTree = "<group>"; };
 		837864D7192AE85D00242511 /* testSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testSocket.m; sourceTree = "<group>"; };
+		837864E0192AE91B00242511 /* SailsBaseResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsBaseResponseSerializer.h; path = ../Classes/ios/SailsBaseResponseSerializer.h; sourceTree = "<group>"; };
+		837864E1192AE91B00242511 /* SailsBaseResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsBaseResponseSerializer.m; path = ../Classes/ios/SailsBaseResponseSerializer.m; sourceTree = "<group>"; };
+		837864E2192AE91B00242511 /* SailsHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsHTTP.h; path = ../Classes/ios/SailsHTTP.h; sourceTree = "<group>"; };
+		837864E3192AE91B00242511 /* SailsHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsHTTP.m; path = ../Classes/ios/SailsHTTP.m; sourceTree = "<group>"; };
+		837864E4192AE91B00242511 /* SailsIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsIO.h; path = ../Classes/ios/SailsIO.h; sourceTree = "<group>"; };
+		837864E5192AE91B00242511 /* SailsIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsIO.m; path = ../Classes/ios/SailsIO.m; sourceTree = "<group>"; };
+		837864E6192AE91B00242511 /* SailsRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsRouter.h; path = ../Classes/ios/SailsRouter.h; sourceTree = "<group>"; };
+		837864E7192AE91B00242511 /* SailsRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsRouter.m; path = ../Classes/ios/SailsRouter.m; sourceTree = "<group>"; };
+		837864E8192AE91B00242511 /* SailsSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsSerializable.h; path = ../Classes/ios/SailsSerializable.h; sourceTree = "<group>"; };
+		837864E9192AE91B00242511 /* SailsSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsSocket.h; path = ../Classes/ios/SailsSocket.h; sourceTree = "<group>"; };
+		837864EA192AE91B00242511 /* SailsSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SailsSocket.m; path = ../Classes/ios/SailsSocket.m; sourceTree = "<group>"; };
+		837864EB192AE91B00242511 /* SailsTransportProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SailsTransportProtocol.h; path = ../Classes/ios/SailsTransportProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +121,7 @@
 		8378648E192AE65000242511 = {
 			isa = PBXGroup;
 			children = (
+				837864DF192AE90000242511 /* Sails.iOS */,
 				837864A0192AE65000242511 /* Example */,
 				837864BF192AE65000242511 /* ExampleTests */,
 				83786499192AE65000242511 /* Frameworks */,
@@ -184,6 +202,25 @@
 				837864C2192AE65000242511 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		837864DF192AE90000242511 /* Sails.iOS */ = {
+			isa = PBXGroup;
+			children = (
+				837864E0192AE91B00242511 /* SailsBaseResponseSerializer.h */,
+				837864E1192AE91B00242511 /* SailsBaseResponseSerializer.m */,
+				837864E2192AE91B00242511 /* SailsHTTP.h */,
+				837864E3192AE91B00242511 /* SailsHTTP.m */,
+				837864E4192AE91B00242511 /* SailsIO.h */,
+				837864E5192AE91B00242511 /* SailsIO.m */,
+				837864E6192AE91B00242511 /* SailsRouter.h */,
+				837864E7192AE91B00242511 /* SailsRouter.m */,
+				837864E8192AE91B00242511 /* SailsSerializable.h */,
+				837864E9192AE91B00242511 /* SailsSocket.h */,
+				837864EA192AE91B00242511 /* SailsSocket.m */,
+				837864EB192AE91B00242511 /* SailsTransportProtocol.h */,
+			);
+			name = Sails.iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,9 +387,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837864EE192AE91B00242511 /* SailsIO.m in Sources */,
+				837864EC192AE91B00242511 /* SailsBaseResponseSerializer.m in Sources */,
+				837864ED192AE91B00242511 /* SailsHTTP.m in Sources */,
 				837864B1192AE65000242511 /* ViewController.m in Sources */,
 				837864AB192AE65000242511 /* AppDelegate.m in Sources */,
+				837864F0192AE91B00242511 /* SailsSocket.m in Sources */,
 				837864A7192AE65000242511 /* main.m in Sources */,
+				837864EF192AE91B00242511 /* SailsRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

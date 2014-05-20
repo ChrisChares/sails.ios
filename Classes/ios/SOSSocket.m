@@ -99,9 +99,11 @@
                                                                 headerFields:@{@"Content-Type": @"application/json"}];
     
     
-    [self.socket sendEvent:method withData:payload andAcknowledge:^(id argsData) {
+    [self.socket sendEvent:method withData:payload andAcknowledge:^(id argsString) {
+        
+        NSData *data = [argsString dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error;
-        id result = [serializer responseObjectForResponse:mockResponse data:argsData error:&error];
+        id result = [serializer responseObjectForResponse:mockResponse data:data error:&error];
         if ( error ) {
             NSLog(@"%@", error);
             cb(error, nil);

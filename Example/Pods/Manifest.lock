@@ -22,7 +22,7 @@ PODS:
   - OHHTTPStubs (3.1.7):
     - OHHTTPStubs/Core
   - OHHTTPStubs/Core (3.1.7)
-  - sails.ios (0.2.0):
+  - sails.ios (0.2.2):
     - AFNetworking (~> 2.2.1)
     - socket.IO (~> 0.5.2)
     - SOCKit (~> 1.1)
@@ -35,18 +35,18 @@ PODS:
 DEPENDENCIES:
   - Expecta
   - OHHTTPStubs (~> 3.1.7)
-  - sails.ios (from `../sails.ios.podspec`)
+  - sails.ios (from `../`)
   - Specta (~> 0.2.1)
 
 EXTERNAL SOURCES:
   sails.ios:
-    :path: ../sails.ios.podspec
+    :path: ../
 
 SPEC CHECKSUMS:
   AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   OHHTTPStubs: b571bd884ce1ebdbda850ea41674b9fbb9eba667
-  sails.ios: c406e2d3253794de1733d2613a8ac8e408081f35
+  sails.ios: e9b8af2c5d2697d5aa2b89d4401dd90b41067d05
   socket.IO: db3e71805c862038ab73209dda2b0ad6babc54b2
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
   SOCKit: d8d0dd3688ae1026c12367570da8fa8e1a6980fb

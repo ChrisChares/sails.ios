@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
-#import "SailsRouter.h"
-#import "SailsBaseResponseSerializer.h"
+#import "SOSRouter.h"
+#import "SOSBaseResponseSerializer.h"
 
-@implementation SailsRouter
+@implementation SOSRouter
 
 - (id)initWithRoutes:(NSDictionary *)routes
 {
@@ -24,7 +24,7 @@
         }
         
         _routes = mapTable;
-        _defaultResponseSerializer = [[SailsBaseResponseSerializer alloc] init];
+        _defaultResponseSerializer = [[SOSBaseResponseSerializer alloc] init];
         
     }
     

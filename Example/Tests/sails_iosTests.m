@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SailsIO.h"
+#import "SailsIOS.h"
 
 @interface sails_iosTests : XCTestCase
 
-@property SailsIO *sails;
+@property SailsIOS *sails;
 @end
 
 @implementation sails_iosTests
@@ -20,7 +20,7 @@
 {
     [super setUp];
     
-    _sails = [[SailsIO alloc] initWithBaseURLString:@"http://localhost"];
+    _sails = [[SailsIOS alloc] initWithBaseURLString:@"http://localhost"];
 }
 
 - (void)tearDown
@@ -36,8 +36,8 @@
 
 - (void)testSetDefaultsWorks
 {
-    [SailsIO setDefaultInstance:_sails];
-    expect([SailsIO defaultInstance]).notTo.beNil;
+    [SailsIOS setDefaultInstance:_sails];
+    expect([SailsIOS defaultInstance]).notTo.beNil;
 }
 - (void)testSailsSocketsNotNil
 {

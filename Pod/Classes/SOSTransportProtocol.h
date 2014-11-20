@@ -12,7 +12,7 @@
 typedef void(^SailsIOBlock)(NSError *error, id response);
 
 
-@protocol SailsTransportProtocol <NSObject>
+@protocol SOSTransportProtocol <NSObject>
 
 @required
 - (void)get:(NSString *)url data:(id)data callback:(SailsIOBlock)cb;

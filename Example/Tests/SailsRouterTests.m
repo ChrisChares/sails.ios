@@ -1,5 +1,5 @@
 //
-//  SailsRouterTests.m
+//  SOSRouterTests.m
 //  sails.ios
 //
 //  Created by Chris on 5/14/14.
@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SailsRouter.h"
+#import "SOSRouter.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SOCKit/SOCKit.h>
 
@@ -15,11 +15,11 @@
 #define route2 @"/user/:id/events"
 #define route3 @"/agent/:id/events"
 
-@interface SailsRouterTests : XCTestCase
-@property SailsRouter *router;
+@interface SOSRouterTests : XCTestCase
+@property SOSRouter *router;
 @end
 
-@implementation SailsRouterTests
+@implementation SOSRouterTests
 
 - (void)setUp
 {
@@ -27,7 +27,7 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
     
-    _router = [[SailsRouter alloc] initWithRoutes:@{route1: [AFJSONResponseSerializer serializer],
+    _router = [[SOSRouter alloc] initWithRoutes:@{route1: [AFJSONResponseSerializer serializer],
                                                     route2: [AFHTTPResponseSerializer serializer],
                                                     route3: [AFXMLParserResponseSerializer serializer]
                                                     }];

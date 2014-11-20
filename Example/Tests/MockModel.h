@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SailsSerializable.h"
+#import "SOSSerializable.h"
 
-@interface MockModel : NSObject <SailsSerializable>
+@interface MockModel : NSObject <SOSSerializable>
 
 + (id)testOne;
 + (id)testTwo;

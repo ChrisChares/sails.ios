@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
-#import "SailsBaseResponseSerializer.h"
-#import "SailsSerializable.h"
+#import "SOSBaseResponseSerializer.h"
+#import "SOSSerializable.h"
 
-@implementation SailsBaseResponseSerializer
+@implementation SOSBaseResponseSerializer
 
 - (id)init
 {
     self = [super init];
     if ( self ) {
-        self.acceptableStatusCodes = [NSIndexSet indexSetWithIndex:200];
+        self.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 99)];
         self.removesKeysWithNullValues = YES;
     }
     

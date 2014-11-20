@@ -64,7 +64,7 @@
 #define COCOAPODS_POD_AVAILABLE_sails_ios
 #define COCOAPODS_VERSION_MAJOR_sails_ios 0
 #define COCOAPODS_VERSION_MINOR_sails_ios 2
-#define COCOAPODS_VERSION_PATCH_sails_ios 0
+#define COCOAPODS_VERSION_PATCH_sails_ios 2
 
 // socket.IO
 #define COCOAPODS_POD_AVAILABLE_socket_IO

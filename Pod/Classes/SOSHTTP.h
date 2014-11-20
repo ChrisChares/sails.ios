@@ -7,11 +7,11 @@
 //
 
 #import "AFHTTPSessionManager.h"
-#import "SailsTransportProtocol.h"
+#import "SOSTransportProtocol.h"
 
-@class SailsIO;
-@interface SailsHTTP : AFHTTPSessionManager <SailsTransportProtocol>
+@class SailsIOS;
+@interface SOSHTTP : AFHTTPSessionManager <SOSTransportProtocol>
 
-@property (weak, nonatomic) SailsIO *sails;
+@property (weak, nonatomic) SailsIOS *sails;
 
 @end

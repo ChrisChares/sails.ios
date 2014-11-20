@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol SailsSerializable <NSObject>
+@protocol SOSSerializable <NSObject>
 
 
 @required

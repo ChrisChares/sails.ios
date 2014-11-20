@@ -6,18 +6,19 @@
 //  Copyright (c) 2014 eunoia. All rights reserved.
 //
 
-#import "SailsHTTP.h"
-#import "SailsIO.h"
-@implementation SailsHTTP
+#import "SOSHTTP.h"
+#import "SailsIOS.h"
+@implementation SOSHTTP
 
-- (id)initWithBaseURL:(NSURL *)url {
+
+- (id)initWithBaseURL:(NSURL *)url
+{
     self = [super initWithBaseURL:url];
     if ( self ) {
         self.requestSerializer = [AFJSONRequestSerializer new];
     }
     return self;
 }
-
 - (void)get:(NSString *)url data:(id)data callback:(SailsIOBlock)cb
 {
     NSLog(@"Requesting url %@ with data %@", url, data);

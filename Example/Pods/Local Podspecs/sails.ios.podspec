@@ -24,7 +24,7 @@ s.ios.deployment_target = '7.0'
 # s.osx.deployment_target = '10.7'
 s.requires_arc = true
 
-s.source_files = 'Pod/Classes'
+s.source_files = 'Classes/ios'
 
 s.ios.exclude_files = 'Classes/osx'
 s.osx.exclude_files = 'Classes/ios'

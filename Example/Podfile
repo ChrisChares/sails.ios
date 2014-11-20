@@ -1,11 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'sails.ios', :exclusive => true do
-  pod "sails.ios", :path => "../"
+  pod "sails.ios", :path => "../sails.ios.podspec"
 end
 
 target 'Tests', :exclusive => true do
-  pod "sails.ios", :path => "../"
+  pod "sails.ios", :path => "../sails.ios.podspec"
 
   pod 'Specta', '~> 0.2.1'
   pod 'Expecta'

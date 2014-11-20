@@ -1,31 +1,29 @@
 PODS:
-  - AFNetworking (2.5.0):
+  - AFNetworking (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.5.0):
+  - AFNetworking/NSURLConnection (2.2.4):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.5.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.5.0)
-  - AFNetworking/Security (2.5.0)
-  - AFNetworking/Serialization (2.5.0)
-  - AFNetworking/UIKit (2.5.0):
+  - AFNetworking/NSURLSession (2.2.4):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Expecta (0.3.1)
   - OHHTTPStubs (3.1.7):
     - OHHTTPStubs/Core
   - OHHTTPStubs/Core (3.1.7)
-  - sails.ios (0.1.0):
-    - AFNetworking (~> 2.5)
+  - sails.ios (0.2.0):
+    - AFNetworking (~> 2.2.1)
     - socket.IO (~> 0.5.2)
     - SOCKit (~> 1.1)
   - socket.IO (0.5.2):
@@ -37,18 +35,18 @@ PODS:
 DEPENDENCIES:
   - Expecta
   - OHHTTPStubs (~> 3.1.7)
-  - sails.ios (from `../`)
+  - sails.ios (from `../sails.ios.podspec`)
   - Specta (~> 0.2.1)
 
 EXTERNAL SOURCES:
   sails.ios:
-    :path: ../
+    :path: ../sails.ios.podspec
 
 SPEC CHECKSUMS:
-  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   OHHTTPStubs: b571bd884ce1ebdbda850ea41674b9fbb9eba667
-  sails.ios: bfd89292105aa5e9718544d9fa59ac51f957d2d6
+  sails.ios: c406e2d3253794de1733d2613a8ac8e408081f35
   socket.IO: db3e71805c862038ab73209dda2b0ad6babc54b2
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
   SOCKit: d8d0dd3688ae1026c12367570da8fa8e1a6980fb

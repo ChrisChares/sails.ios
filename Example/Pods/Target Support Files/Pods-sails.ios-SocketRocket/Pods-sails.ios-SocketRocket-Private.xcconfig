@@ -1,0 +1,5 @@
+#include "Pods-sails.ios-SocketRocket.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/SocketRocket" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Expecta" "${PODS_ROOT}/Headers/Public/OHHTTPStubs" "${PODS_ROOT}/Headers/Public/SOCKit" "${PODS_ROOT}/Headers/Public/SocketRocket" "${PODS_ROOT}/Headers/Public/Specta" "${PODS_ROOT}/Headers/Public/sails.ios" "${PODS_ROOT}/Headers/Public/socket.IO"
+OTHER_LDFLAGS = ${PODS_SAILS_IOS_SOCKETROCKET_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}

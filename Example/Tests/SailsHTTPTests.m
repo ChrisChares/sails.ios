@@ -46,6 +46,11 @@
     [super tearDown];
 }
 
+- (void)testUsesJSONRequestSerializer {
+    expect(_sails.http.requestSerializer).to.beKindOf([AFJSONRequestSerializer class]);
+           
+}
+
 - (void)testMockData
 {
     

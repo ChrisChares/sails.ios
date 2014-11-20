@@ -10,6 +10,14 @@
 #import "SailsIO.h"
 @implementation SailsHTTP
 
+- (id)initWithBaseURL:(NSURL *)url {
+    self = [super initWithBaseURL:url];
+    if ( self ) {
+        self.requestSerializer = [AFJSONRequestSerializer new];
+    }
+    return self;
+}
+
 - (void)get:(NSString *)url data:(id)data callback:(SailsIOBlock)cb
 {
     NSLog(@"Requesting url %@ with data %@", url, data);

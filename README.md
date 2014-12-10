@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/sails.ios.svg?style=flat)](http://cocoadocs.org/docsets/sails.ios)
 [![Platform](https://img.shields.io/cocoapods/p/sails.ios.svg?style=flat)](http://cocoadocs.org/docsets/sails.ios)
 
+A wrapper around both HTTP and WS requests allowing you to set up object mappings for both and interact with either agnostically.  I use this with sails.js server instances. 
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -13,9 +15,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-sails.ios is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+sails.ios is available through [CocoaPods](http://cocoapods.org). It is not available in the main repo however.  To install it, simply add the following line to your Podfile:
 
+    source 'https://github.com/CocoaPods/Specs.git'
     pod "sails.ios"
 
 ## Author
